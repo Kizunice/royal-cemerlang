@@ -4,11 +4,16 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Subtitle from "../UI/Subtitle";
+import { Spotlight } from "../UI/Spotlight";
 
 export default function Service() {
     return (
         <section className="w-full p-6 lg:p-16 mx-auto">
             <div className="flex flex-col lg:h-[42rem]">
+                <Spotlight
+                    className="left-0 md:left-60 md:-top-20"
+                    fill="white"
+                />
                 <div className="mt-6 mb-16 px-6 text-center">    
                     <Subtitle text={"Service"} />
                     <Typography 

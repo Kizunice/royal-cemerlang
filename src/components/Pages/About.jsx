@@ -4,12 +4,28 @@ import { Typography} from "@material-tailwind/react"
 import Subtitle from "../UI/Subtitle"
 import { ABOUT_IMAGES } from "@/lib/data"
 import TabsCustom from "../UI/Tabs";
+import { motion } from "framer-motion";
+
+const variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
 
 export default function About() {
     return (
         <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16">
             <div className="flex flex-col mb-6 justify-center items-center lg:w-[80%] mx-auto">
-                <div className="mx-auto text-center mb-16 ">
+                <motion.div 
+                    variants={variants}
+                    initial="hidden"
+                    animate="show"
+                    className="mx-auto text-center mb-16"
+                >
                     <Subtitle text={"About"} />
                     <Typography 
                         variant="h1"
@@ -25,7 +41,7 @@ export default function About() {
                         and brands that are key players in their industries, ensuring RCT solutions is always provide its 
                         customers the best solution.
                     </Typography>
-                </div>
+                </motion.div>
 
                 <div className="flex flex-wrap gap-4 mb-8 mx-auto justify-center items-center">
                     <TabsCustom data={ABOUT_IMAGES} />
