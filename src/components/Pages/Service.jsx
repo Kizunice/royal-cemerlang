@@ -7,8 +7,8 @@ import Subtitle from "../UI/Subtitle";
 
 export default function Service() {
     return (
-        <section className="w-full p-6 lg:p-20 mx-auto">
-            <div className="flex flex-col lg:h-[46rem] md:h-[38rem]">
+        <section className="w-full p-8 lg:p-20 mx-auto">
+            <div className="flex flex-col lg:h-[46rem]">
                 <div className="mt-8 mb-16 px-6 text-center">    
                     <Subtitle text={"Service"} />
                     <Typography 

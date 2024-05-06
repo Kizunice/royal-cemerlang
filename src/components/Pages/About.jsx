@@ -7,7 +7,7 @@ import TabsCustom from "../UI/Tabs";
 
 export default function About() {
     return (
-        <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16 md:h-[34rem]">
+        <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16">
             <div className="flex flex-col mb-6 justify-center items-center lg:w-[80%] mx-auto">
                 <div className="mx-auto text-center mb-16 ">
                     <Subtitle text={"About"} />
@@ -19,7 +19,7 @@ export default function About() {
                     </Typography>
                     <Typography
                         variant="lead"
-                        className="mx-auto w-full px-2 !text-gray-500 lg:text-md text-base"
+                        className="mx-auto lg:w-[80%] px-2 !text-gray-500 lg:text-md text-base"
                         >
                         RCT is a good team company for operating as official representative/distributor of manufacturers 
                         and brands that are key players in their industries, ensuring RCT solutions is always provide its 

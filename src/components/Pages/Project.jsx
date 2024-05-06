@@ -25,7 +25,7 @@ import Image from "next/image"
 
 export function CardProject({title, icon, items}) {
     return (
-        <Card className="w-full max-w-[20rem] h-[28rem] px-4 py-6 bg-[#F4F3FB]">
+        <Card className="w-full mx-auto max-w-[20rem] h-[28rem] px-4 py-6 bg-[#F4F3FB]">
             <CardHeader floated={false} shadow={false} className="rounded-none bg-[#F4F3FB] ">
                 <Image src={icon} width={70} height={70} alt={title} />
             </CardHeader>
@@ -52,39 +52,9 @@ export function CardProject({title, icon, items}) {
 }
 
 export default function Project() {
-    // const scrollRef = useRef(null)
-    // const ghostRef = useRef(null)
-    // const [scrollRange, setScrollRange] = useState(0)
-    // const [viewportW, setViewportW] = useState(0)
-
-    // useLayoutEffect(() => {
-    //     scrollRef && setScrollRange(scrollRef.current.scrollWidth)
-    // }, [scrollRef])
-
-    // const onResize = useCallback(entries => {
-    //     for (let entry of entries) {
-    //     setViewportW(entry.contentRect.width)
-    //     }
-    // }, [])
-
-    // useLayoutEffect(() => {
-    //     const resizeObserver = new ResizeObserver(entries => onResize(entries))
-    //     resizeObserver.observe(ghostRef.current)
-    //     return () => resizeObserver.disconnect()
-    // }, [onResize])
-
-    // const { scrollYProgress } = useViewportScroll()
-    // const transform = useTransform(
-    //     scrollYProgress,
-    //     [0, 1],
-    //     [0, -scrollRange + viewportW]
-    // )
-    // const physics = { damping: 15, mass: 0.27, stiffness: 55 }
-    // const spring = useSpring(transform, physics)
-
     return (
-        <section className="bg-white lg:h-[120vh] md:h-[34rem]">
-            <div className="flex flex-col my-4 ml-28">
+        <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16">
+            <div className="flex flex-col my-4 mx-auto">
                 <div className="justify-start items-start text-left px-6 lg:w-[90%] lg:p-14">
                     <Subtitle text={"Project"} />
                     <Typography 

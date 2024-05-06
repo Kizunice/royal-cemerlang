@@ -15,7 +15,7 @@ import Link from 'next/link'
 function NavItem({ label, link}) {
   return (
     <a href={link}>
-      <li className="p-1 font-reguler text-md">
+      <li className="p-1 font-reguler text-md text-gray-900 lg:text-white">
         {label}
       </li>
     </a>
@@ -24,7 +24,7 @@ function NavItem({ label, link}) {
 
 function NavList() {
   return (
-    <ul className="mb-4 mt-2  flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-5">
+    <ul className="mb-4 mt-2 px-4 py-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-5">
       <NavItem label="About" link={'/about'} />
       <NavItem label="Service" link={'/service'} />
       <NavItem label="Project" link={'/project'} />
@@ -71,7 +71,7 @@ export default function Header() {
         </IconButton>
       </div>
       <Collapse open={open}>
-        <div className="mt-2 rounded-xl bg-white py-2">
+        <div className="mt-2 rounded-xl bg-white p-2">
           <NavList />
           <Button className="mb-2" fullWidth>
             Get a quote

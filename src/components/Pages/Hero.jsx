@@ -30,7 +30,8 @@ export default function Hero() {
                     <div className="mt-8 grid w-full place-items-start md:justify-center">
                     <div className="mb-2 flex w-full flex-col gap-4 md:flex-row">
                         <Button
-                        color="gray"
+                        color="white"
+                        variant="outlined"
                         className="w-full px-4 md:w-[12rem]"
                         >
                         get started

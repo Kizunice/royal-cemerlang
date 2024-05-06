@@ -8,7 +8,13 @@ import Image from "next/image"
 
 export default function TabsCustom({data}) {
     return (
-        <Tabs value="Cyber Intelligence & Security" orientation="vertical" placement="top" >
+        <Tabs 
+            value="Cyber Intelligence & Security" 
+            orientation="vertical" 
+            placement="top"
+            id="custom-animation"
+            className="flex flex-col md:flex-row"
+            >
             <TabsHeader 
                 className="bg-transparent w-[300px] mb-4 lg:mr-20" 
                 indicatorProps={{
@@ -20,10 +26,16 @@ export default function TabsCustom({data}) {
                 </Tab>
                 ))}
             </TabsHeader>
-            <TabsBody>
+            <TabsBody 
+                animate={{
+                    initial: { y: 250 },
+                    mount: { y: 0 },
+                    unmount: { y: 250 },
+                  }}
+            >
                 {data.map(({ value, image }) => (
-                <TabPanel key={value} value={value} className="p-0">
-                    <Image src={image} key={value} width={350} height={350} />
+                <TabPanel key={value} value={value} className="flex p-0">
+                    <Image src={image} key={value} width={350} height={350} className="flex" />
                 </TabPanel>
                 ))}
             </TabsBody>

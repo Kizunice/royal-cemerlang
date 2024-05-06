@@ -7,14 +7,14 @@ import Subtitle from "../UI/Subtitle";
 import Image from 'next/image'
 export default function Team() {
     return (
-        <section className="">
-            <div className="flex flex-col max-w-[1440px] p-10 mx-auto lg:px-20 xl:max-h-[700px] lg:py-20 xl:flex-row mt-8">
-                <div className="max-w-[70%] justify-start items-start text-left px-6">
+        <section className="w-full p-8 lg:p-20 mx-auto">
+            <div className="flex flex-col lg:flex-row">
+                <div className="lg:w-[50%] justify-start items-start text-left px-6 mb-8">
                     <Subtitle text={"Team"} />
                     <Typography 
                         variant="h2"
                         color="white"
-                        className="max-w-[80%] my-4 leading-snug !text-2xl lg:!text-4xl">
+                        className="my-4 leading-snug !text-2xl lg:!text-4xl">
                         We keep our team reasonably small, but we focus on {" "} 
                         <span className="leading-snug text-[#3F3BF2]">synergy</span>, {" "}
                         <span className="leading-snug text-[#3F3BF2]">complementarity</span>{" "}, and {" "}
@@ -22,15 +22,14 @@ export default function Team() {
                     </Typography>
                     <Typography
                         variant="lead"
-                        className="max-w-[80%] !text-gray-500 lg:text-md text-base"
+                        className="!text-gray-500 lg:text-md text-base"
                         >
                         RCT is managed by an experienced, dynamic and multicultural group of 
                         people with diversified backgrounds in Defense, IT, Telecommunication, Engineering, 
                         Oild and Gas, Business Management, International Organizations, etc. 
                     </Typography>
-                    
                 </div>
-                <div className="flex flex-col justify-start">
+                <div className="flex flex-col justify-center items-center mx-auto">
                     <Image src="/images/team-1.png" width={280} height={200} alt="Team RCT" />
                 </div>
 
