@@ -46,7 +46,7 @@ export default function Header() {
 
   return (
     <Navbar color="transparent" fullWidth>
-      <div className="container mx-auto flex items-center justify-between text-gray-300">
+      <div className="container mx-auto flex items-center p-2 justify-between text-gray-300">
         <Link href="/">
           <Image src="/Logo.png" width={100} height={100} alt="Logo Royal Cemerlang Technology"/>
         </Link>
@@ -64,9 +64,9 @@ export default function Header() {
           className="ml-auto inline-block text-blue-gray-900 lg:hidden"
         >
           {open ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            <XMarkIcon className="h-6 w-6 text-white" strokeWidth={2} />
           ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            <Bars3Icon className="h-6 w-6 text-white" strokeWidth={2} />
           )}
         </IconButton>
       </div>

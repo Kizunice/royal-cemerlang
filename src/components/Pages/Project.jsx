@@ -113,17 +113,15 @@ export default function Project() {
                 </div>
                 <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" /> */}
                 
-                <div className="scroller">
-                    <div className="flex flex-row gap-4">
-                        {PROJECT.map(({title,icon,items}, index) => (
-                            <CardProject
-                                key={index}
-                                title={title}
-                                icon={icon}
-                                items={items}       
-                            />
-                        ))}
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {PROJECT.map(({title,icon,items}, index) => (
+                        <CardProject
+                            key={index}
+                            title={title}
+                            icon={icon}
+                            items={items}       
+                        />
+                    ))}
                 </div>
 
             </div>
