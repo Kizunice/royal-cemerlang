@@ -55,7 +55,7 @@ export default function Project() {
     return (
         <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16">
             <div className="flex flex-col my-4 mx-auto">
-                <div className="justify-start items-start text-left px-6 lg:w-[90%] lg:p-14">
+                <div className="justify-start items-start text-left px-6 mb-4 lg:w-[90%] lg:mb-8 lg:px-14">
                     <Subtitle text={"Project"} />
                     <Typography 
                         variant="h2"

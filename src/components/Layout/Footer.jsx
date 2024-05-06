@@ -179,7 +179,7 @@ export default function Footer() {
                             </Link>
                         </div> */}
 
-                        <p className="mt-2 text-sm text-gray-200 sm:order-first sm:mt-0">&copy; 2023 royalcemerlang.com</p>
+                        <p className="mt-2 text-sm text-gray-200 sm:order-first sm:mt-0">Copyright &copy; 2024 royalcemerlang.com</p>
                     </div>
                 </div>
             </div>

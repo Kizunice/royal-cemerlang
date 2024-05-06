@@ -7,9 +7,9 @@ import Subtitle from "../UI/Subtitle";
 
 export default function Service() {
     return (
-        <section className="w-full p-8 lg:p-20 mx-auto">
-            <div className="flex flex-col lg:h-[46rem]">
-                <div className="mt-8 mb-16 px-6 text-center">    
+        <section className="w-full p-6 lg:p-16 mx-auto">
+            <div className="flex flex-col lg:h-[42rem]">
+                <div className="mt-6 mb-16 px-6 text-center">    
                     <Subtitle text={"Service"} />
                     <Typography 
                         variant="h1"
@@ -28,7 +28,7 @@ export default function Service() {
                     </Typography>
                 </div>
 
-                <div className="w-full lg:w-[80%] mx-auto px-6 mb-8">
+                <div className="w-full lg:w-[80%] mx-auto px-4 mb-8">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 min-h-[9rem] text-white text-center">
                         <div className="lg:row-start-1 lg:row-end-3 items-center">
                             <div className="bg-[url('/images/service-1.png')] bg-cover h-[9rem] lg:h-[19rem]">

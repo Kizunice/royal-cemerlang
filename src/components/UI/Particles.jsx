@@ -47,7 +47,7 @@ const ParticlesComponent = (props) => {
           color: '#ffffff',
           distance: 150,
           enable: true,
-          opacity: 0.5,
+          opacity: 0.3,
           width: 1,
         },
         move: {
@@ -57,7 +57,7 @@ const ParticlesComponent = (props) => {
             default: 'bounce',
           },
           random: false,
-          speed: 3,
+          speed: 2,
           straight: false,
         },
         number: {
@@ -67,7 +67,7 @@ const ParticlesComponent = (props) => {
           value: 220,
         },
         opacity: {
-          value: 0.5,
+          value: 0.3,
         },
         size: {
           value: { min: 1, max: 3 }, // let's randomize the particles size a bit

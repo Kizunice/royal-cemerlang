@@ -11,11 +11,21 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from "next/navigation";
+
+
+const links = [
+  { href: "/about", text: "About" },
+  { href: "/service", text: "Service" },
+  { href: "/project", text: "Project" },
+  { href: "/team", text: "Team" },
+];
 
 function NavItem({ label, link}) {
+  const path = usePathname();
   return (
     <a href={link}>
-      <li className="p-1 font-reguler text-md text-gray-900 lg:text-white">
+      <li className={`${link === path ? "font-bold" : "font-normal"} p-1 text-md text-gray-900 lg:text-white`}>
         {label}
       </li>
     </a>
