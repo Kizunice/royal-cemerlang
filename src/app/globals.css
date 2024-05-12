@@ -36,9 +36,9 @@ body {
 }
 
 .loader {
-  width: 35px;
+  width: 50px;
   aspect-ratio: 1;
-  --_g: no-repeat radial-gradient(farthest-side,#000 94%,#0000);
+  --_g: no-repeat radial-gradient(farthest-side,#fff 94%,#ffffff);
   background:
     var(--_g) 0    0,
     var(--_g) 100% 0,

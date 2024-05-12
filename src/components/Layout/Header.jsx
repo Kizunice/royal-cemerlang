@@ -58,7 +58,7 @@ export default function Header() {
     <Navbar color="transparent" fullWidth>
       <div className="container mx-auto flex items-center p-2 justify-between text-gray-300">
         <Link href="/">
-          <Image src="/Logo.png" width={100} height={100} alt="Logo Royal Cemerlang Technology"/>
+          <Image src="/Logo.png" width={100} height={100} alt="Logo Royal Cemerlang Technology" priority />
         </Link>
         <div className="hidden lg:block">
           <NavList />
