@@ -21,23 +21,23 @@ const ParticlesComponent = (props) => {
       },
       interactivity: {
         events: {
-          onClick: {
-            enable: true, // enables the click event
-            mode: 'push', // adds the particles on click
-          },
+          // onClick: {
+          //   enable: true, // enables the click event
+          //   mode: 'push', // adds the particles on click
+          // },
           onHover: {
             enable: true, // enables the hover event
             mode: 'repulse', // make the particles run away from the cursor
           },
         },
-        modes: {
-          push: {
-            quantity: 10, // number of particles to add on click
-          },
-          repulse: {
-            distance: 100, // distance of the particles from the cursor
-          },
-        },
+        // modes: {
+        //   push: {
+        //     quantity: 10, // number of particles to add on click
+        //   },
+        //   repulse: {
+        //     distance: 100, // distance of the particles from the cursor
+        //   },
+        // },
       },
       particles: {
         color: {
@@ -64,7 +64,7 @@ const ParticlesComponent = (props) => {
           density: {
             enable: true,
           },
-          value: 220,
+          value: 250,
         },
         opacity: {
           value: 0.3,

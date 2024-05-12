@@ -11,7 +11,7 @@ export default function Service() {
         <section className="w-full p-6 lg:p-16 mx-auto">
             <div className="flex flex-col lg:h-[42rem]">
                 <Spotlight
-                    className="left-0 md:left-60 md:-top-20"
+                    className="left-0 md:left-60 md:-top-10"
                     fill="white"
                 />
                 <div className="mt-6 mb-16 px-6 text-center">    
