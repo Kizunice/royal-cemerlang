@@ -1,12 +1,47 @@
 'use client'
-import React from "react";
+import React, {useEffect} from "react";
 import {
   Typography,
 } from "@material-tailwind/react";
 import Subtitle from "../UI/Subtitle";
 import { Spotlight } from "../UI/Spotlight";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const variants1 = {
+    hidden: { opacity: 0, y:30 },
+    visible: {
+      opacity: 1,
+      y:0,
+      transition: {
+        duration: 0.5
+      },
+    },
+  };
+
+  const variants2 = {
+    hidden: { opacity: 0, y:30 },
+    visible: {
+      opacity: 1,
+      y:0,
+      transition: {
+        duration: 1.5
+      },
+    },
+  };
 
 export default function Service() {
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+          control.start("visible");
+        } else {
+          control.start("hidden");
+        }
+      }, [control, inView]);
+
     return (
         <section className="w-full p-6 lg:p-16 mx-auto">
             <div className="flex flex-col lg:h-[42rem]">
@@ -14,7 +49,12 @@ export default function Service() {
                     className="left-0 md:left-60 md:-top-10"
                     fill="white"
                 />
-                <div className="mt-6 mb-16 px-6 text-center">    
+                <motion.div 
+                    variants={variants1}
+                    ref={ref}
+                    initial="hidden"
+                    animate={control}
+                    className="mt-6 mb-16 px-6 text-center">    
                     <Subtitle text={"Service"} />
                     <Typography 
                         variant="h1"
@@ -31,10 +71,15 @@ export default function Service() {
                         >
                         RCT solutions are reliable-customer-driven and tailor - <br></br> made in accordance with local laws.
                     </Typography>
-                </div>
+                </motion.div>
 
                 <div className="w-full lg:w-[80%] mx-auto px-4 mb-8">
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 min-h-[9rem] text-white text-center">
+                    <motion.div 
+                        variants={variants2}
+                        ref={ref}
+                        initial="hidden"
+                        animate={control}
+                        className="grid grid-cols-2 lg:grid-cols-4 gap-4 min-h-[9rem] text-white text-center">
                         <div className="lg:row-start-1 lg:row-end-3 items-center">
                             <div className="bg-[url('/images/service-1.png')] bg-cover h-[9rem] lg:h-[19rem]">
                                 <div className="flex flex-col w-full h-full bg-[#420BB5]/75 backdrop-brightness-25 lg:rounded-l-lg justify-between">
@@ -71,7 +116,7 @@ export default function Service() {
                             </div>
                         </div>
 
-                    </div>
+                    </motion.div>
 
                 </div>
 

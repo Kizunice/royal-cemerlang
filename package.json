@@ -17,8 +17,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.0",
+    "react-intersection-observer": "^9.10.2",
     "react-tsparticles": "^2.12.2",
-    "resize-observer-polyfill": "^1.5.1",
     "tailwind-merge": "^2.3.0",
     "tsparticles": "^3.3.0",
     "tsparticles-slim": "^2.12.0"

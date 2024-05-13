@@ -1,11 +1,13 @@
 'use client'
-import React from "react";
+import { useEffect } from "react";
 import {
   Button,
   Typography,
 } from "@material-tailwind/react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { Spotlight } from "../UI/Spotlight";
+import { useInView } from "react-intersection-observer";
+
 
 const variants = {
     hidden: { 
@@ -17,12 +19,13 @@ const variants = {
       y:0,
       transition: {
         staggerChildren: 0.3,
-        duration: 1,
+        duration: 1.5,
       },
     },
   };
 
 export default function Hero() {
+
     return (
         <section className="wrapper">
             <div className="flex flex-col h-[90vh] justify-center items-center">

@@ -8,20 +8,38 @@ import {
     List,
     ListItem,
     ListItemPrefix,
-    ListItemSuffix,
 } from "@material-tailwind/react"
 import Subtitle from "../UI/Subtitle"
-import React, { useRef, useState, useLayoutEffect, useCallback } from "react"
-import ResizeObserver from "resize-observer-polyfill"
-import {
-  motion,
-  useViewportScroll,
-  useTransform,
-  useSpring
-} from "framer-motion"
+import React, { useEffect } from "react"
 import { PROJECT } from "@/lib/data"
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import Image from "next/image"
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const variants1 = {
+    hidden: { opacity: 0, y:30 },
+    visible: {
+      opacity: 1,
+      y:0,
+      transition: {
+        duration: 0.5
+      },
+    },
+  };
+
+  const variants2 = {
+    hidden: { opacity: 0, y:30 },
+    visible: {
+      opacity: 1,
+      y:0,
+      transition: {
+        duration: 2
+      },
+    },
+  };
+
+ 
 
 export function CardProject({title, icon, items}) {
     return (
@@ -52,10 +70,25 @@ export function CardProject({title, icon, items}) {
 }
 
 export default function Project() {
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+          control.start("visible");
+        } else {
+          control.start("hidden");
+        }
+      }, [control, inView]);
     return (
         <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16">
             <div className="flex flex-col my-4 mx-auto">
-                <div className="justify-start items-start text-left px-6 mb-4 lg:w-[90%] lg:mb-8 lg:px-14">
+                <motion.div 
+                    variants={variants1}
+                    ref={ref}
+                    initial="hidden"
+                    animate={control}
+                    className="justify-start items-start text-left px-6 mb-4 lg:w-[90%] lg:mb-8 lg:px-14">
                     <Subtitle text={"Project"} />
                     <Typography 
                         variant="h2"
@@ -63,7 +96,7 @@ export default function Project() {
                         className="my-4 w-full leading-snug !text-2xl lg:max-w-3xl lg:!text-5xl">
                         RCT solutions are reliable-customer-driven and tailor -made in accordance with local laws.                    
                     </Typography>
-                </div>
+                </motion.div>
 
                 {/* <div className="scroll-container">
                     <motion.section
@@ -83,7 +116,12 @@ export default function Project() {
                 </div>
                 <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" /> */}
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <motion.div 
+                    variants={variants2}
+                    ref={ref}
+                    initial="hidden"
+                    animate={control}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {PROJECT.map(({title,icon,items}, index) => (
                         <CardProject
                             key={index}
@@ -92,7 +130,7 @@ export default function Project() {
                             items={items}       
                         />
                     ))}
-                </div>
+                </motion.div>
 
             </div>
         </section>

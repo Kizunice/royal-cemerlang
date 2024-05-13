@@ -1,29 +1,54 @@
 'use client'
-import React from "react";
+import React, {useEffect} from "react";
 import { Typography} from "@material-tailwind/react"
 import Subtitle from "../UI/Subtitle"
 import { ABOUT_IMAGES } from "@/lib/data"
 import TabsCustom from "../UI/Tabs";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const variants = {
-    hidden: { opacity: 0 },
-    show: {
+const variants1 = {
+    hidden: { opacity: 0, y:30 },
+    visible: {
       opacity: 1,
+      y:0,
       transition: {
-        staggerChildren: 0.3,
+        duration: 0.5
+      },
+    },
+  };
+
+  const variants2 = {
+    hidden: { opacity: 0, y:30 },
+    visible: {
+      opacity: 1,
+      y:0,
+      transition: {
+        duration: 1.5
       },
     },
   };
 
 export default function About() {
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+          control.start("visible");
+        } else {
+          control.start("hidden");
+        }
+      }, [control, inView]);
+
     return (
         <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16">
             <div className="flex flex-col mb-6 justify-center items-center lg:w-[80%] mx-auto">
                 <motion.div 
-                    variants={variants}
+                    variants={variants1}
+                    ref={ref}
                     initial="hidden"
-                    animate="show"
+                    animate={control}
                     className="mx-auto text-center mb-16"
                 >
                     <Subtitle text={"About"} />
@@ -43,9 +68,14 @@ export default function About() {
                     </Typography>
                 </motion.div>
 
-                <div className="flex flex-wrap gap-4 mb-8 mx-auto justify-center items-center">
+                <motion.div  
+                    variants={variants2}
+                    ref={ref}
+                    initial="hidden"
+                    animate={control} 
+                    className="flex flex-wrap gap-4 mb-8 mx-auto justify-center items-center">
                     <TabsCustom data={ABOUT_IMAGES} />
-                </div>    
+                </motion.div>    
             </div>         
         </section>
     )
