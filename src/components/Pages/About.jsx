@@ -24,7 +24,7 @@ const variants1 = {
       opacity: 1,
       y:0,
       transition: {
-        duration: 1.5
+        duration: 1
       },
     },
   };
@@ -42,14 +42,14 @@ export default function About() {
       }, [control, inView]);
 
     return (
-        <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16" id="About" >
+        <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16" id="about" >
             <div className="flex flex-col mb-6 justify-center items-center lg:w-[80%] mx-auto">
                 <motion.div 
                     variants={variants1}
                     ref={ref}
                     initial="hidden"
                     animate={control}
-                    className="mx-auto text-center mb-16"
+                    className="mx-auto text-center mt-6 mb-8 md:mt-0 md:mb-16"
                 >
                     <Subtitle text={"About"} />
                     <Typography 

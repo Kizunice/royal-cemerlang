@@ -1,12 +1,10 @@
 'use client'
-import { useEffect } from "react";
 import {
   Button,
   Typography,
 } from "@material-tailwind/react";
 import { motion, useAnimation } from "framer-motion";
 import { Spotlight } from "../UI/Spotlight";
-import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
 const variants = {
@@ -19,13 +17,12 @@ const variants = {
       y:0,
       transition: {
         staggerChildren: 0.3,
-        duration: 1.5,
+        duration: 1,
       },
     },
   };
 
-export default function Hero() {
-
+export default function HeroPage() {
     return (
         <section className="wrapper">
             <div className="flex flex-col h-[90vh] justify-center items-center">
@@ -34,7 +31,7 @@ export default function Hero() {
                     fill="white"
                 />
                 <motion.div 
-                    className="px-6 text-center"
+                    className="px-6 text-center mt-[-4em] md:mt-0"
                     variants={variants}
                     initial="hidden"
                     animate="show"
@@ -59,11 +56,19 @@ export default function Hero() {
                         <Button
                         color="white"
                         variant="outlined"
-                        className="w-full px-4 md:w-[12rem]"
+                        className="w-full px-4 md:w-[12rem] cursor-none"
                         >
-                        <Link href="/#About" scroll={true} >
-                            get started
-                        </Link>
+                            <Link href="/" scroll={true} className="cursor-none" onClick={(e) => {
+                                setTimeout(() => {
+                                document.getElementById("about") &&
+                                    document
+                                    .getElementById("about")
+                                    .scrollIntoView({ behavior: "smooth"});
+                                }, 2000)
+                                }} 
+                            >
+                                get started
+                            </Link>
                         </Button>
                     </div>
                     </div>
