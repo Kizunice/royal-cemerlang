@@ -16,12 +16,12 @@ export default function TabsCustom({data}) {
             className="flex flex-col md:flex-row"
             >
             <TabsHeader 
-                className="bg-transparent w-[300px] mb-4 lg:mr-20" 
+                className="bg-transparent w-[300px] mb-4 lg:mr-20 " 
                 indicatorProps={{
-                    className: "bg-purple-900/10 shadow-none !text-gray-900",
+                    className: "bg-purple-900/10 shadow-none !text-gray-900 cursor-none",
                 }}>
                 {data.map(({ label, value }) => (
-                <Tab key={value} value={value} className="!justify-start py-3">
+                <Tab key={value} value={value} className="!justify-start py-3 cursor-none">
                     {label}
                 </Tab>
                 ))}

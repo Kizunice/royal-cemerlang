@@ -98,35 +98,7 @@ export default function Footer() {
                             </ul>
                         </div>
 
-                        {/* <div className="text-left">
-                            <p className="text-lg font-medium text-white">Informasi</p>
-
-                            <ul className="mt-4 md:mt-8 space-y-4 text-sm">
-                                <li>
-                                    <Link className="text-gray-100 transition hover:text-gray-100/75" href="/">
-                                        Pusat Bantuan
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link className="text-gray-100 transition hover:text-gray-100/75" href="/">
-                                        Pengembalian Dana
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link className="text-gray-100 transition hover:text-gray-100/75" href="/">
-                                        Tanya Jawab
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link className="text-gray-100 transition hover:text-gray-100/75" href="/">
-                                        Artikel
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div> */}
+                       
 
 
                         <div className="text-left col-span-2">

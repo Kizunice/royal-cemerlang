@@ -31,7 +31,7 @@ export default function HeroPage() {
                     fill="white"
                 />
                 <motion.div 
-                    className="px-6 text-center mt-[-4em] md:mt-0"
+                    className="px-6 text-center mt-[-4em] md:mt-[-2em]"
                     variants={variants}
                     initial="hidden"
                     animate="show"
@@ -64,7 +64,7 @@ export default function HeroPage() {
                                     document
                                     .getElementById("about")
                                     .scrollIntoView({ behavior: "smooth"});
-                                }, 2000)
+                                }, 500)
                                 }} 
                             >
                                 get started

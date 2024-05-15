@@ -25,7 +25,7 @@ function NavItem({ label, link}) {
   const path = usePathname();
   return (
     <a href={link}>
-      <li className={`${link === path ? "font-bold" : "font-normal"} p-1 text-md text-gray-900 lg:text-white`}>
+      <li className={`${link === path ? "font-bold" : "font-normal"} p-1 text-md text-gray-900 lg:text-white cursor-none`}>
         {label}
       </li>
     </a>
