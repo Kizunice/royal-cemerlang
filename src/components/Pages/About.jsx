@@ -42,7 +42,7 @@ export default function About() {
       }, [control, inView]);
 
     return (
-        <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16">
+        <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16" id="About" >
             <div className="flex flex-col mb-6 justify-center items-center lg:w-[80%] mx-auto">
                 <motion.div 
                     variants={variants1}

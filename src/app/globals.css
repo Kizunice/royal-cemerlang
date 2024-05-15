@@ -21,6 +21,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #08001A;
   cursor: none;
+  scroll-behavior: smooth !important;
   /* overscroll-behavior: none;
   -ms-overflow-style: none;
   text-rendering: optimizeLegibility;

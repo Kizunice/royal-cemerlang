@@ -1,7 +1,6 @@
 'use client';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim'; // loads tsparticles-slim
-//import { loadFull } from "tsparticles"; // loads tsparticles
 import { useCallback, useMemo } from 'react';
 
 // tsParticles Repository: https://github.com/matteobruni/tsparticles
@@ -19,6 +18,7 @@ const ParticlesComponent = (props) => {
         enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
         zIndex: -1, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
       },
+      fpsLimit: 120,
       interactivity: {
         events: {
           // onClick: {
@@ -73,6 +73,7 @@ const ParticlesComponent = (props) => {
           value: { min: 1, max: 3 }, // let's randomize the particles size a bit
         },
       },
+      detectRetina: true,
     };
   }, []);
 

@@ -7,7 +7,7 @@ import {
 import { motion, useAnimation } from "framer-motion";
 import { Spotlight } from "../UI/Spotlight";
 import { useInView } from "react-intersection-observer";
-
+import Link from "next/link";
 
 const variants = {
     hidden: { 
@@ -61,7 +61,9 @@ export default function Hero() {
                         variant="outlined"
                         className="w-full px-4 md:w-[12rem]"
                         >
-                        get started
+                        <Link href="/#About" scroll={true} >
+                            get started
+                        </Link>
                         </Button>
                     </div>
                     </div>
