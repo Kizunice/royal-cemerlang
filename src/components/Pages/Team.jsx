@@ -54,19 +54,27 @@ export default function Team() {
                     <Typography 
                         variant="h2"
                         color="white"
-                        className="my-4 leading-snug !text-2xl lg:!text-4xl">
-                        We keep our team reasonably small, but we focus on {" "} 
+                        className="my-4 leading-snug !text-2xl lg:!text-5xl">
+                        We focus on {" "} 
                         <span className="leading-snug text-[#3F3BF2]">synergy</span>, {" "}
-                        <span className="leading-snug text-[#3F3BF2]">complementarity</span>{" "}, and {" "}
-                        <span className="leading-snug text-[#3F3BF2]">teamwork</span>
+                        <span className="leading-snug text-[#3F3BF2]">expertise</span>, and {" "}
+                        <span className="leading-snug text-[#3F3BF2]">solidity</span>.
+                    </Typography>
+                    <Typography
+                        variant="lead"
+                        className="!text-gray-500 lg:text-md text-base mb-4"
+                        >
+                        Our team is the cornerstone of our success. We are dedicated professionals, 
+                        striving for excellence in every solutions. 
                     </Typography>
                     <Typography
                         variant="lead"
                         className="!text-gray-500 lg:text-md text-base"
                         >
-                        RCT is managed by an experienced, dynamic and multicultural group of 
-                        people with diversified backgrounds in Defense, IT, Telecommunication, Engineering, 
-                        Oild and Gas, Business Management, International Organizations, etc. 
+                        Our strong management and exceptional leadership guide us in delivering 
+                        customer-focused and techno-based solutions. We leverage frontier technology 
+                        to meet the evolving needs of our end-users, ensuring they benefit from the 
+                        latest advancements. 
                     </Typography>
                 </motion.div>
                 <motion.div 

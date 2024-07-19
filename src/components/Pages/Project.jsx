@@ -89,12 +89,21 @@ export default function Project() {
                     initial="hidden"
                     animate={control}
                     className="justify-start items-start text-left px-6 mb-4 lg:w-[90%] lg:mb-8 lg:px-14">
-                    <Subtitle text={"Project"} />
+                    <Subtitle text={"Solution"} />
+                    <Typography
+                        variant="h1"
+                        className="text-[#000b37] my-6 w-full leading-snug !text-4xl lg:max-w-3xl lg:!text-5xl"
+                    >
+                    AREAS OF FOCUS
+                    </Typography>
                     <Typography 
                         variant="h2"
-                        color="purple"
-                        className="my-4 w-full leading-snug !text-2xl lg:max-w-3xl lg:!text-5xl">
-                        RCT solutions are reliable-customer-driven and tailor -made in accordance with local laws.                    
+                        className="text-[#000b37] my-4 leading-snug !text-2xl lg:!text-4xl">
+                        RCT solutions are {" "} 
+                        <span className="leading-snug text-[#3F3BF2]">innovative</span>, {" "}
+                        <span className="leading-snug text-[#3F3BF2]">reliable</span>, and {" "}
+                        <span className="leading-snug text-[#3F3BF2]">user-focused</span> {" "} <br></br>
+                        in accordance with local laws. 
                     </Typography>
                 </motion.div>
 

@@ -4,7 +4,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Subtitle from "../UI/Subtitle";
-import { Spotlight } from "../UI/Spotlight";
+// import { Spotlight } from "../UI/Spotlight";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -45,10 +45,7 @@ export default function Service() {
     return (
         <section className="w-full p-6 lg:p-16 mx-auto">
             <div className="flex flex-col lg:h-[42rem]">
-                <Spotlight
-                    className="left-0 md:left-60 md:-top-10"
-                    fill="white"
-                />
+               
                 <motion.div 
                     variants={variants1}
                     ref={ref}

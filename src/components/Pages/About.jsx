@@ -60,7 +60,7 @@ export default function About() {
                     </Typography>
                     <Typography
                         variant="lead"
-                        className="mx-auto lg:w-[80%] px-2 !text-gray-500 lg:text-md text-base"
+                        className="mx-auto font-sans lg:w-[80%] px-2 !text-gray-500 lg:text-md text-base"
                         >
                         RCT is a good team company for operating as official representative/distributor of manufacturers 
                         and brands that are key players in their industries, ensuring RCT solutions is always provide its 

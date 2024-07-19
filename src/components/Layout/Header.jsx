@@ -25,7 +25,7 @@ function NavItem({ label, link}) {
   const path = usePathname();
   return (
     <a href={link}>
-      <li className={`${link === path ? "font-bold" : "font-normal"} p-1 text-md text-gray-900 lg:text-white cursor-none`}>
+      <li className={`${link === path ? "font-bold" : "font-normal"} uppercase p-1 text-md text-gray-900 lg:text-white cursor-none`}>
         {label}
       </li>
     </a>
@@ -37,7 +37,7 @@ function NavList() {
     <ul className="mb-4 mt-2 px-4 py-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-5">
       <NavItem label="About" link={'/about'} />
       <NavItem label="Service" link={'/service'} />
-      <NavItem label="Project" link={'/project'} />
+      <NavItem label="Solution" link={'/solution'} />
       <NavItem label="Team" link={'/team'} />
     </ul>
   );
@@ -64,7 +64,7 @@ export default function Header() {
           <NavList />
         </div>
         <Button color="gray" className="hidden lg:inline-block">
-          Get a quote
+          Contact Us
         </Button>
         <IconButton
           size="sm"

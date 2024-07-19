@@ -4,7 +4,6 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { motion, useAnimation } from "framer-motion";
-import { Spotlight } from "../UI/Spotlight";
 import Link from "next/link";
 
 const variants = {
@@ -26,10 +25,6 @@ export default function HeroPage() {
     return (
         <section className="wrapper">
             <div className="flex flex-col h-[90vh] justify-center items-center">
-                <Spotlight
-                    className="-top-40 left-0 md:left-60 md:-top-20"
-                    fill="white"
-                />
                 <motion.div 
                     className="px-6 text-center mt-[-4em] md:mt-[-2em]"
                     variants={variants}
@@ -39,17 +34,18 @@ export default function HeroPage() {
                     <Typography
                     variant="h1"
                     color="white"
-                    className="mx-auto my-6 w-full leading-snug !text-4xl lg:max-w-3xl lg:!text-7xl bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
+                    className="mx-auto font-bold w-full leading-snug !text-4xl lg:max-w-4xl lg:!text-[50px] bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
                     >
-                    We offer{" "} <br></br>
-                    <span className="leading-snug ">
-                    State-of-the art
-                    </span>{" "}
-                    <span className="leading-snug text-[#3F3BF2]">
-                        Technology
-                    </span>
-                    .
+                        INNOVATING TECHNOLOGIES:
                     </Typography>
+                    <Typography
+                        variant="h1"
+                        color="white"
+                        className="mx-auto mt-[-20px] font-bold leading-snug text-[#476CFF] lg:max-w-3xl uppercase lg:mt-8"
+                    >
+                        Pushing the boundaries of what possible.
+                    </Typography>
+                
                 
                     <div className="mt-8 grid w-full place-items-start md:justify-center">
                     <div className="mb-2 flex w-full flex-col gap-4 md:flex-row">
