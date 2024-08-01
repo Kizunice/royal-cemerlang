@@ -5,6 +5,7 @@ import {
 } from "@material-tailwind/react";
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
+import { montserrat } from "@/app/layout";
 
 const variants = {
     hidden: { 
@@ -34,20 +35,20 @@ export default function HeroPage() {
                     <Typography
                     variant="h1"
                     color="white"
-                    className="mx-auto font-bold w-full leading-snug !text-4xl lg:max-w-4xl lg:!text-[50px] bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
+                    className={`${montserrat.variable} font-primary mx-auto mb-2 lg:mb-4 font-semibold w-full !text-[36px] lg:max-w-4xl lg:!text-[50px]`}
                     >
                         INNOVATING TECHNOLOGIES:
                     </Typography>
                     <Typography
                         variant="h1"
                         color="white"
-                        className="mx-auto mt-[-20px] font-bold leading-snug text-[#476CFF] lg:max-w-3xl uppercase lg:mt-8"
+                        className={`${montserrat.variable} font-primary mx-auto font-semibold leading-loose text-[#476CFF] text-lg lg:!text-4xl lg:max-w-3xl uppercase mt-2 lg:mt-4`}
                     >
-                        Pushing the boundaries of what possible.
+                        Pushing the boundaries of <br /> what possible.
                     </Typography>
                 
                 
-                    <div className="mt-8 grid w-full place-items-start md:justify-center">
+                    {/* <div className="mt-8 grid w-full place-items-start md:justify-center">
                     <div className="mb-2 flex w-full flex-col gap-4 md:flex-row">
                         <Button
                         color="white"
@@ -67,7 +68,7 @@ export default function HeroPage() {
                             </Link>
                         </Button>
                     </div>
-                    </div>
+                    </div> */}
                 </motion.div>
             </div>           
         </section>

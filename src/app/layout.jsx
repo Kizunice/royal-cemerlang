@@ -1,7 +1,7 @@
 'use client'
 import '../styles/globals.css';
 import React, { useState, useEffect } from "react"
-import { Quantico } from 'next/font/google';
+import { Montserrat, Hind } from 'next/font/google';
 import localFont from 'next/font/local'
 import FlareCursor from '@/components/UI/FlareCursor';
 import Header from '@/components/Layout/Header';
@@ -10,13 +10,20 @@ import ParticlesComponent from '@/components/UI/Particles';
 import Loading from './loading';
 import ScrollToTopButton from '../components/UI/ScrollToTopButton'
 
-const inter = Quantico({  
-  weight: ['400', '700'],
-  subsets: ['latin'] 
-});
+export const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-primary',
+})
+ 
+export const hind = Hind({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600','700'],
+  display: 'swap',
+  variable: '--font-text',
+})
 
-const custom = localFont({src : '../styles/Supermolot.ttf'})
-
+// const custom = localFont({src : '../styles/Supermolot.ttf'})
 
 
 export default function RootLayout({ children }) {
@@ -31,10 +38,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head/>
-      <body className={custom.className}>
+      <body className={`${hind.variable} font-text`}>
         {isLoading ? (<Loading/>) : (
           <>
-          <FlareCursor />
+          {/* <FlareCursor /> */}
           <ParticlesComponent/>
           <ScrollToTopButton/>
           <Header/>

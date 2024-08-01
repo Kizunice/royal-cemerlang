@@ -15,17 +15,16 @@ import { usePathname } from "next/navigation";
 
 
 const links = [
-  { href: "/about", text: "About" },
-  { href: "/service", text: "Service" },
-  { href: "/project", text: "Project" },
-  { href: "/team", text: "Team" },
+  { href: "/#about", text: "About" },
+  { href: "/#project", text: "Project" },
+  { href: "/#team", text: "Team" },
 ];
 
 function NavItem({ label, link}) {
   const path = usePathname();
   return (
     <a href={link}>
-      <li className={`${link === path ? "font-bold" : "font-normal"} uppercase p-1 text-md text-gray-900 lg:text-white cursor-none`}>
+      <li className={`${link === path ? "font-bold" : "font-normal"} font-primary uppercase p-1 text-md text-gray-900 lg:text-white`}>
         {label}
       </li>
     </a>
@@ -35,10 +34,9 @@ function NavItem({ label, link}) {
 function NavList() {
   return (
     <ul className="mb-4 mt-2 px-4 py-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-5">
-      <NavItem label="About" link={'/about'} />
-      <NavItem label="Service" link={'/service'} />
-      <NavItem label="Solution" link={'/solution'} />
-      <NavItem label="Team" link={'/team'} />
+      <NavItem label="About" link={'/#about'} />
+      <NavItem label="Solution" link={'/#solution'} />
+      <NavItem label="Team" link={'/#team'} />
     </ul>
   );
 }
@@ -55,16 +53,16 @@ export default function Header() {
   }, []);
 
   return (
-    <Navbar color="transparent" fullWidth>
+    <Navbar color="transparent" fullWidth >
       <div className="container mx-auto flex items-center p-2 justify-between text-gray-300">
         <Link href="/">
-          <Image src="/Logo.png" width={100} height={100} alt="Logo Royal Cemerlang Technology" priority />
+          <Image src="/Logo-RD.png" width={120} height={100} alt="Logo Royal Defense" priority />
         </Link>
         <div className="hidden lg:block">
           <NavList />
         </div>
         <Button color="gray" className="hidden lg:inline-block">
-          Contact Us
+          <Link href="/#contact" >Contact Us</Link>
         </Button>
         <IconButton
           size="sm"

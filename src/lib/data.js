@@ -1,35 +1,35 @@
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
-export const ABOUT_IMAGES = [
+export const ABOUT_BANNER = [
   {
-    label: 'Cyber Intelligence & Security',
-    value: 'Cyber Intelligence & Security',
-    image: '/images/about-1.png',
+    label: 'Intelligence, Surveillance & Reconnaissance (ISR)',
+    value: 'By collaborating with partners and leveraging their technologies, we aim to empower our end-users to achieve ISR missions through data and imagery harnessed from ground-based units, aerial platforms, and satellite systems. Our advanced technology supports real-time and/or near real-time data acquisition capabilities, facilitating immediate situational awareness, rapid decision-making, and enhanced operational effectiveness.',
+    list: ['Unmanned Aerial Vehicles (UAVs)',"Unmanned Ground Vehicles (UGVs)", "Advanced Imagery and Monitoring System", "High Altitude Platform Station"], 
+    image: '/images/about1.jpeg',
   },
   {
-    label: 'Surveillance & Reconnaissance',
-    value: 'Surveillance & Reconnaissance',
-    image: '/images/about-2.png',
+    label: 'Perimeter Security',
+    value: 'Perimeter security plays a crucial role in safeguarding facilities, properties, and assets from unauthorized access, intrusions, and potential threats. Utilizing frontier technologies, we have designed our solutions to ensure robust monitoring, detection, and response capabilities. Our perimeter security provides comprehensive coverage tailored to your unique requirements, ensuring operational continuity.',
+    list: ['Aerial Countermeasure System',"Unattended Ground Sensor", "Signal Intelligence System", "Biometric System"], 
+    image: '/images/about1.jpeg',
   },
   {
-    label: 'Intelligence & Data Collection',
-    value: 'Intelligence & Data Collection',
-    image: '/images/about-3.png',
+    label: 'Cyber Security',
+    value: 'The importance of cybersecurity cannot be overstated in today’s interconnected world, where digital information and systems are integral to nearly every aspect. Protecting sensitive information and data from unauthorized access and cyber attacker, requires a secure and reliable system. Our technologies and expert strategies deliver robust cyber defense, addressing your inquiry to secure data, manage threats, and enhance operational resilience.',
+    list: ['Digital Forensic System', 'Security Operation Center', 'Command Center', 'Open Source Intelligence System', 'Secured Network', 'Data Rate Compression System'], 
+    image: '/images/about1.jpeg',
   },
   {
-    label: 'Advanced Encrypted Systems',
-    value: 'Advanced Encrypted Systems',
-    image: '/images/about-4.png',
+    label: 'Training & Simulator System',
+    value: 'Transform your training with our advanced training and simulator systems, offering a risk-free environment to master critical skills. Our immersive simulations provide hands-on experience that enhances proficiency and readiness for real-world challenges. Experience realistic scenarios that is cost efficient, delivering effective training that surpasses traditional methods. ',
+    list: ['Shooting Simulator',"Wargaming Simulator", "Battlefield Management System", "Parachute Training Simulator ", "Flight Simulator", "Virtual Smart Class Simulator"], 
+    image: '/images/about1.jpeg',
   },
   {
-    label: 'Information Technology',
-    value: 'Information Technology',
-    image: '/images/about-5.png',
-  },
-  {
-    label: 'Engineering',
-    value: 'Engineering',
-    image: '/images/about-6.png',
+    label: 'Tactical Equipment',
+    value: 'Enhance your operational capabilities with our advanced range of tactical equipment. Designed for reliability and performance in diverse environments, our solutions offer superior functionality, ensuring improved situational awareness, enhanced communication, and optimized operational efficiency. Our technologies provide the essential tools required for mission success and personnel safety. ',
+    list: ['Thermal Weapon Scope',"Multifunction Binocular", "Night-Vision Device", "Portable Signaling Surveillance", "Tactical Network Relay System", "Interoperability Extended Communication Relay System", "Power Management System"], 
+    image: '/images/about1.jpeg',
   },
 ];
 

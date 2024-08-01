@@ -11,11 +11,16 @@ import {
 } from "@material-tailwind/react"
 import Subtitle from "../UI/Subtitle"
 import React, { useEffect } from "react"
-import { PROJECT } from "@/lib/data"
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import Image from "next/image"
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { montserrat } from "@/app/layout"
+import Slider from "react-slick"
+import { ABOUT_BANNER } from "@/lib/data"
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 const variants1 = {
     hidden: { opacity: 0, y:30 },
@@ -69,7 +74,7 @@ export function CardProject({title, icon, items}) {
 
 }
 
-export default function Project() {
+export default function Solution() {
     const control = useAnimation();
     const [ref, inView] = useInView();
 
@@ -80,8 +85,18 @@ export default function Project() {
           control.start("hidden");
         }
       }, [control, inView]);
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 800,
+        autoplay: true,
+        autoplaySpeed: 5500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
     return (
-        <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16">
+        <section className="w-full p-6 lg:min-h-[50rem] lg:p-16" id="solution" >
             <div className="flex flex-col my-4 mx-auto">
                 <motion.div 
                     variants={variants1}
@@ -92,13 +107,13 @@ export default function Project() {
                     <Subtitle text={"Solution"} />
                     <Typography
                         variant="h1"
-                        className="text-[#000b37] my-6 w-full leading-snug !text-4xl lg:max-w-3xl lg:!text-5xl"
+                        className={`${montserrat.variable} font-primary text-white my-6 w-full leading-snug !text-[30px] lg:max-w-3xl lg:!text-5xl`}
                     >
                     AREAS OF FOCUS
                     </Typography>
                     <Typography 
                         variant="h2"
-                        className="text-[#000b37] my-4 leading-snug !text-2xl lg:!text-4xl">
+                        className={`${montserrat.variable} font-primary text-white my-4 leading-snug !text-xl lg:!text-2xl`}>
                         RCT solutions are {" "} 
                         <span className="leading-snug text-[#3F3BF2]">innovative</span>, {" "}
                         <span className="leading-snug text-[#3F3BF2]">reliable</span>, and {" "}
@@ -107,7 +122,52 @@ export default function Project() {
                     </Typography>
                 </motion.div>
 
-                {/* <div className="scroll-container">
+                <motion.div 
+                    variants={variants2}
+                    ref={ref}
+                    initial="hidden"
+                    animate={control}
+                >
+                    <Slider {...settings} className="my-4">
+                    {ABOUT_BANNER.map((banner)=>(
+                        <div className="grid lg:grid-cols-2 lg:gap-4 lg:ml-[3rem]" key={banner.label}>
+                            <Image src={banner.image} width={600} height={200} alt={banner.label} />
+                            <div className="p-4 lg:ml-[-4rem]">
+                                <h1 className="text-white font-bold text-2xl mb-4">{banner.label}</h1>
+                                <div className="flex flex-col lg:flex-row">
+                                    <p className="lg:w-[50%] text-gray-400 text-md mb-2 pr-4">{banner.value}</p>
+                                    <div className="lg:w-[50%] text-gray-400 lg:px-6 lg:pr-8">
+                                        {banner.list.map((list => (
+                                            <li key={list}>{list}</li>
+                                        )))}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    ))}
+                    
+                    </Slider>
+                    
+                </motion.div>
+
+                
+            </div>
+        </section>
+    )
+}
+
+{/* <div className="flex flex-col">
+        <h1>{banner.label}</h1>
+        <p>{banner.value}</p>
+    </div> */}
+    {/* <div className="flex-col">
+        {banner.list.map((list => (
+            <li key={list}>{list}</li>
+        )))}
+    </div> */}
+    
+{/* <div className="scroll-container">
                     <motion.section
                     ref={scrollRef}
                     style={{ x: spring }}
@@ -125,7 +185,7 @@ export default function Project() {
                 </div>
                 <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" /> */}
                 
-                <motion.div 
+                {/* <motion.div 
                     variants={variants2}
                     ref={ref}
                     initial="hidden"
@@ -139,9 +199,6 @@ export default function Project() {
                             items={items}       
                         />
                     ))}
-                </motion.div>
+                </motion.div> */}
 
-            </div>
-        </section>
-    )
-}
+                

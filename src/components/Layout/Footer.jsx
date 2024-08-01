@@ -21,17 +21,17 @@ export default function Footer() {
                     <div>
                         <div className="flex justify-start text-left text-white">
                             <Link href={"/"} className="flex items-center gap-2 text-white text-xl font-semibold">
-                                <Image src="/Logo.png" width={100}  height={100} alt="Logo Royal Cemerlang"   />
+                                <Image src="/Logo-RD.png" width={120}  height={100} alt="Logo Royal Defense"   />
                             </Link>
                         </div>
 
-                        <p className="mt-6 max-w-md text-left leading-relaxed text-gray-100 text-xs sm:max-w-xs ">
+                        <p className="mt-6 max-w-md font-light text-left leading-relaxed text-gray-100 text-[14px] sm:max-w-xs ">
                             Royal Cemerlang Technology is a good team company for operating as official representative/distributor
                             of manufactures and brands that are key in their industries, ensurong RCT solutions is always provide
                             its customers the best solution
                         </p>
 
-                        <ul className="mt-4 md:mt-6 flex justify-start gap-4 md:gap-6">
+                        {/* <ul className="mt-4 md:mt-6 flex justify-start gap-4 md:gap-6">
                             <li>
                                 <Link href="#">
                                     <RiFacebookCircleFill
@@ -64,7 +64,7 @@ export default function Footer() {
                                     />
                                 </Link>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
 
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
@@ -97,6 +97,39 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </div>
+
+                        <div className="text-left">
+                            <p className="text-lg font-medium text-white">Menu</p>
+
+                            <ul className="mt-4 md:mt-8 space-y-4 text-sm">
+                                <li>
+                                    <Link className="text-gray-100 transition hover:text-gray-100/75" href="/about">
+                                        About Us
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link className="text-gray-100 transition hover:text-gray-100/75" href="/service">
+                                        Our Services
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link className="text-gray-100 transition hover:text-gray-100/75" href="/project">
+                                        Our Projects
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link className="text-gray-100 transition hover:text-gray-100/75" href="/team">
+                                        Our Teams
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        
 
                        
 

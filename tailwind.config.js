@@ -3,6 +3,7 @@
 const withMT = require('@material-tailwind/react/utils/withMT');
 
 module.exports = withMT({
+  important: true,
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,7 +12,8 @@ module.exports = withMT({
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        text: ['var(--font-text)'],
+        primary: ['var(--font-primary)'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
