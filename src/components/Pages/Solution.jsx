@@ -107,13 +107,13 @@ export default function Solution() {
                     <Subtitle text={"Solution"} />
                     <Typography
                         variant="h1"
-                        className={`${montserrat.variable} font-primary text-white my-6 w-full leading-snug !text-[30px] lg:max-w-3xl lg:!text-5xl`}
+                        className={`${montserrat.variable} font-primary text-white my-6 w-full leading-snug text-[30px] lg:max-w-3xl lg:text-5xl`}
                     >
                     AREAS OF FOCUS
                     </Typography>
                     <Typography 
                         variant="h2"
-                        className={`${montserrat.variable} font-primary text-white my-4 leading-snug !text-xl lg:!text-2xl`}>
+                        className={`${montserrat.variable} font-primary text-white my-4 leading-snug text-xl lg:text-2xl`}>
                         RCT solutions are {" "} 
                         <span className="leading-snug text-[#3F3BF2]">innovative</span>, {" "}
                         <span className="leading-snug text-[#3F3BF2]">reliable</span>, and {" "}
