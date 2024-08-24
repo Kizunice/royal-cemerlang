@@ -91,17 +91,21 @@ export default function Solution() {
         dots: false,
         arrows: false,
         infinite: true,
+        swipe: false,
+        draggable: false,
         pauseOnHover : false,
+        touchMove: false,
         speed: 800,
         autoplay: true,
         autoplaySpeed: 8000,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
+    
     return (
         <>
         <section className="w-full h-[100vh]" id="solution" >
-            <div className="bg-[#000b37]/60 absolute h-[101vh] w-[100vw] z-10">
+            <div className="bg-[#000b37]/60 absolute h-[101vh] w-[100vw] z-10 p-4 lg:p-0">
                 <motion.div 
                     variants={variants1}
                     ref={ref}
@@ -129,7 +133,7 @@ export default function Solution() {
                                 <div key={idx} className="h-[100vh] w-[80%]">
                                     <h1 className="text-white font-bold text-2xl mb-4">{banner.label}</h1>
                                     <div className="flex flex-col lg:flex-row">
-                                        <div className="lg:w-[50%] mb-2 pr-4">
+                                        <div className="lg:w-[60%] mb-2">
                                             <p className="text-gray-200 text-md transition-all ">
                                                 {
                                                    index ? banner.value : banner.list.map((list => (

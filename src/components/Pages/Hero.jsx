@@ -27,7 +27,7 @@ export default function HeroPage() {
         <section className="w-full p-6 lg:p-16" id="hero" >
             <div className="flex flex-col h-[75vh] lg:w-[80%] justify-center items-start">
                 <motion.div 
-                    className="px-6 text-left mt-[-4em] md:mt-[-2em]"
+                    className="text-left mt-[-4em] md:mt-[-8em]"
                     variants={variants}
                     initial="hidden"
                     animate="show"
@@ -35,7 +35,7 @@ export default function HeroPage() {
                     <Typography
                     variant="h1"
                     color="white"
-                    className={`${montserrat.variable} font-primary mx-auto mb-2 lg:mb-4 font-bold w-full text-[30px] lg:max-w-4xl lg:text-[50px]`}
+                    className={`${montserrat.variable} font-primary mx-auto font-bold w-full text-[30px] lg:max-w-4xl lg:text-[50px]`}
                     >
                         INNOVATING TECHNOLOGIES
                     </Typography>
