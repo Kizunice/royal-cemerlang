@@ -50,8 +50,7 @@ export default function Contact() {
                   ref={ref}
                   initial="hidden"
                   animate={control}  
-                  className="flex-wrap justify-start w-full mb-6">
-                  <Subtitle text={"Contact"} />
+                  className="flex-wrap justify-start w-full mt-8 mb-6">
                   <Typography 
                       variant="h2"
                       color="white"
@@ -64,10 +63,10 @@ export default function Contact() {
                   ref={ref}
                   initial="hidden"
                   animate={control}
-                  className="flex flex-col bg-white lg:w-[50%] text-left rounded-lg p-8">
+                  className="flex flex-col border border-white lg:w-[50%] text-left rounded-lg p-8 text-white">
                     <form>
                         <div className="mb-4">
-                            <label className="mb-2 text-left">Name</label>
+                            <label className="mb-2 text-left ">Name</label>
                             <input
                                 type="text"
                                 placeholder="Type your name" 

@@ -13,18 +13,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from "next/navigation";
 
-
 const links = [
   { href: "/#about", text: "About" },
   { href: "/#project", text: "Project" },
   { href: "/#team", text: "Team" },
+  { href: "/#contact", text: "Contact" },
 ];
 
 function NavItem({ label, link}) {
   const path = usePathname();
   return (
     <a href={link}>
-      <li className={`${link === path ? "font-bold" : "font-normal"} font-primary uppercase p-1 text-md text-gray-900 lg:text-white`}>
+      <li className={`${link === path ? "font-bold text-lg" : "font-normal"} font-bold font-primary uppercase pt-2 p-1 text-lg relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center`}>
         {label}
       </li>
     </a>
@@ -37,6 +37,7 @@ function NavList() {
       <NavItem label="About" link={'/#about'} />
       <NavItem label="Solution" link={'/#solution'} />
       <NavItem label="Team" link={'/#team'} />
+      <NavItem label="Contact" link={'/#contact'} />
     </ul>
   );
 }
@@ -53,17 +54,17 @@ export default function Header() {
   }, []);
 
   return (
-    <Navbar color="transparent" fullWidth >
-      <div className="container mx-auto flex items-center p-2 justify-between text-gray-300">
+    <nav className="sticky top-4 h-[60px] lg:h-[70px] z-50 my-4 mx-4 lg:mx-12 rounded-md bg-white backdrop-filter backdrop-blur-lg bg-opacity-30" fullWidth >
+      <div className="container mx-auto flex items-center p-2 justify-between text-black">
         <Link href="/">
-          <Image src="/Logo-RD.png" width={120} height={100} alt="Logo Royal Defense" priority />
+          <Image src="/Logo_RD.png" width={120} height={100} alt="Logo Royal Defense" priority />
         </Link>
         <div className="hidden lg:block">
           <NavList />
         </div>
-        <Button color="gray" className="hidden lg:inline-block">
+        {/* <Button color="gray" className="hidden lg:inline-block">
           <Link href="/#contact" >Contact Us</Link>
-        </Button>
+        </Button> */}
         <IconButton
           size="sm"
           variant="text"
@@ -72,20 +73,20 @@ export default function Header() {
           className="ml-auto inline-block text-blue-gray-900 lg:hidden"
         >
           {open ? (
-            <XMarkIcon className="h-6 w-6 text-white" strokeWidth={2} />
+            <XMarkIcon className="h-6 w-6 text-black" strokeWidth={2} />
           ) : (
-            <Bars3Icon className="h-6 w-6 text-white" strokeWidth={2} />
+            <Bars3Icon className="h-6 w-6 text-black" strokeWidth={2} />
           )}
         </IconButton>
       </div>
       <Collapse open={open}>
-        <div className="mt-2 rounded-xl bg-white p-2">
+        <div className="rounded-xl bg-white backdrop-filter p-2">
           <NavList />
-          <Button className="mb-2" fullWidth>
+          {/* <Button className="mb-2" fullWidth>
             Get a quote
-          </Button>
+          </Button> */}
         </div>
       </Collapse>
-    </Navbar>
+    </nav>
   );
 }

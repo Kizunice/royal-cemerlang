@@ -10,7 +10,7 @@ import {
     ListItemPrefix,
 } from "@material-tailwind/react"
 import Subtitle from "../UI/Subtitle"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import Image from "next/image"
 import { motion, useAnimation } from "framer-motion";
@@ -77,6 +77,7 @@ export function CardProject({title, icon, items}) {
 export default function Solution() {
     const control = useAnimation();
     const [ref, inView] = useInView();
+    const [index, setIndex] = useState(true)
 
     useEffect(() => {
         if (inView) {
@@ -87,16 +88,80 @@ export default function Solution() {
       }, [control, inView]);
 
     const settings = {
-        dots: true,
+        dots: false,
+        arrows: false,
         infinite: true,
+        pauseOnHover : false,
         speed: 800,
         autoplay: true,
-        autoplaySpeed: 5500,
+        autoplaySpeed: 8000,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
     return (
-        <section className="w-full p-6 lg:min-h-[50rem] lg:p-16" id="solution" >
+        <>
+        <section className="w-full h-[100vh]" id="solution" >
+            <div className="bg-[#000b37]/60 absolute h-[101vh] w-[100vw] z-10">
+                <motion.div 
+                    variants={variants1}
+                    ref={ref}
+                    initial="hidden"
+                    animate={control}
+                    className="z-40 opacity-100 justify-start items-start text-left px-6 lg:w-[90%] lg:mt-[8rem] lg:px-14">
+                        <Typography
+                            variant="h1"
+                            className={`${montserrat.variable} font-primary text-white my-6 w-full leading-snug text-[30px] lg:max-w-3xl lg:text-4xl`}
+                        >
+                        AREAS OF FOCUS
+                        </Typography>
+                        <Typography 
+                            variant="h2"
+                            className={`${montserrat.variable} font-primary text-white my-4 leading-snug text-xl lg:text-2xl`}>
+                            RCT solutions are {" "} 
+                            <span className="leading-snug text-[#3F3BF2]">innovative</span>, {" "}
+                            <span className="leading-snug text-[#3F3BF2]">reliable</span>, and {" "}
+                            <span className="leading-snug text-[#3F3BF2]">user-focused</span> {" "} <br></br>
+                            in accordance with local laws. 
+                        </Typography>
+
+                        <Slider {...settings} className="mt-12">
+                            {ABOUT_BANNER.map((banner,idx)=>(
+                                <div key={idx} className="h-[100vh] w-[80%]">
+                                    <h1 className="text-white font-bold text-2xl mb-4">{banner.label}</h1>
+                                    <div className="flex flex-col lg:flex-row">
+                                        <div className="lg:w-[50%] mb-2 pr-4">
+                                            <p className="text-gray-200 text-md transition-all ">
+                                                {
+                                                   index ? banner.value : banner.list.map((list => (
+                                                    <li key={list}>{list}</li>
+                                                )))
+                                                }
+                                            </p>
+                                            <button 
+                                                className="mt-6 px-4 py-2 text-white border border-white" 
+                                                onClick={() => {setIndex(!index)}} 
+                                            >
+                                                read more
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </Slider>
+                </motion.div>
+            </div>
+
+            <Slider {...settings} className="relative z-0" >
+                {ABOUT_BANNER.map((banner,idx)=>(
+                     <div key={idx} className="h-[100vh]">
+                        <img src={banner.image} alt={banner.label} className="w-[100%] object-cover"/>
+                        
+                    </div>
+                ))}
+            </Slider>
+        </section>
+      
+        {/* <section className="w-full p-6 lg:min-h-[50rem] lg:p-16" id="solution" >
             <div className="flex flex-col my-4 mx-auto">
                 <motion.div 
                     variants={variants1}
@@ -104,7 +169,6 @@ export default function Solution() {
                     initial="hidden"
                     animate={control}
                     className="justify-start items-start text-left px-6 mb-4 lg:w-[90%] lg:mb-8 lg:px-14">
-                    <Subtitle text={"Solution"} />
                     <Typography
                         variant="h1"
                         className={`${montserrat.variable} font-primary text-white my-6 w-full leading-snug text-[30px] lg:max-w-3xl lg:text-5xl`}
@@ -146,14 +210,14 @@ export default function Solution() {
                             
                         </div>
                     ))}
-                    
                     </Slider>
                     
                 </motion.div>
 
                 
             </div>
-        </section>
+        </section> */}
+        </>
     )
 }
 

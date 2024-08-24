@@ -24,10 +24,10 @@ const variants = {
 
 export default function HeroPage() {
     return (
-        <section className="wrapper">
-            <div className="flex flex-col h-[90vh] justify-center items-center">
+        <section className="w-full p-6 lg:p-16" id="hero" >
+            <div className="flex flex-col h-[75vh] lg:w-[80%] justify-center items-start">
                 <motion.div 
-                    className="px-6 text-center mt-[-4em] md:mt-[-2em]"
+                    className="px-6 text-left mt-[-4em] md:mt-[-2em]"
                     variants={variants}
                     initial="hidden"
                     animate="show"
@@ -35,17 +35,13 @@ export default function HeroPage() {
                     <Typography
                     variant="h1"
                     color="white"
-                    className={`${montserrat.variable} font-primary mx-auto mb-2 lg:mb-4 font-semibold w-full text-[30px] lg:max-w-4xl lg:text-[50px]`}
+                    className={`${montserrat.variable} font-primary mx-auto mb-2 lg:mb-4 font-bold w-full text-[30px] lg:max-w-4xl lg:text-[50px]`}
                     >
-                        INNOVATING TECHNOLOGIES:
+                        INNOVATING TECHNOLOGIES
                     </Typography>
-                    <Typography
-                        variant="h1"
-                        color="white"
-                        className={`${montserrat.variable} font-primary mx-auto font-semibold leading-loose text-[#476CFF] text-lg lg:text-4xl lg:max-w-3xl uppercase mt-2 lg:mt-4`}
-                    >
+                    <h1 className={`${montserrat.variable} font-primary mx-auto font-semibold leading-relaxed text-[#476CFF] text-lg lg:text-[36px] lg:max-w-3xl uppercase mt-2 lg:mt-4`}>
                         Pushing the boundaries of <br /> what possible.
-                    </Typography>
+                    </h1>
                 
                 
                     {/* <div className="mt-8 grid w-full place-items-start md:justify-center">

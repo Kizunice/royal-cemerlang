@@ -17,21 +17,20 @@ export default function Footer() {
     return (
         <footer className="bg-[#0e2e74]/55 ">
             <div className="max-w-[78rem] mx-auto p-8 lg:pt-12">
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div className="flex justify-center text-center text-white">
+                            <Link href={"/"} className="flex items-center gap-2 text-white text-xl font-semibold">
+                                <Image src="/Logo-RD.png" width={200}  height={200} alt="Logo Royal Defense"   />
+                            </Link>
+                        </div>
+                {/* <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     <div>
-                        <div className="flex justify-start text-left text-white">
+                        <div className="flex justify-center text-center text-white">
                             <Link href={"/"} className="flex items-center gap-2 text-white text-xl font-semibold">
                                 <Image src="/Logo-RD.png" width={120}  height={100} alt="Logo Royal Defense"   />
                             </Link>
                         </div>
 
-                        <p className="mt-6 max-w-md font-light text-left leading-relaxed text-gray-100 text-[14px] sm:max-w-xs ">
-                            Royal Cemerlang Technology is a good team company for operating as official representative/distributor
-                            of manufactures and brands that are key in their industries, ensurong RCT solutions is always provide
-                            its customers the best solution
-                        </p>
-
-                        {/* <ul className="mt-4 md:mt-6 flex justify-start gap-4 md:gap-6">
+                        <ul className="mt-4 md:mt-6 flex justify-start gap-4 md:gap-6">
                             <li>
                                 <Link href="#">
                                     <RiFacebookCircleFill
@@ -64,7 +63,7 @@ export default function Footer() {
                                     />
                                 </Link>
                             </li>
-                        </ul> */}
+                        </ul>
                     </div>
 
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
@@ -171,7 +170,7 @@ export default function Footer() {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="mt-10 border-t border-gray-300 pt-6">
                     <div className="text-center ">
@@ -184,7 +183,7 @@ export default function Footer() {
                             </Link>
                         </div> */}
 
-                        <p className="mt-2 text-sm text-gray-200 sm:order-first sm:mt-0">Copyright &copy; 2024 royalcemerlang.com</p>
+                        <p className="mt-2 text-sm text-gray-200 sm:order-first sm:mt-0">Copyright &copy; 2024 royaldefense.com</p>
                     </div>
                 </div>
             </div>

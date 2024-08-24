@@ -5,7 +5,7 @@ export const ABOUT_BANNER = [
     label: 'Intelligence, Surveillance & Reconnaissance (ISR)',
     value: 'By collaborating with partners and leveraging their technologies, we aim to empower our end-users to achieve ISR missions through data and imagery harnessed from ground-based units, aerial platforms, and satellite systems. Our advanced technology supports real-time and/or near real-time data acquisition capabilities, facilitating immediate situational awareness, rapid decision-making, and enhanced operational effectiveness.',
     list: ['Unmanned Aerial Vehicles (UAVs)',"Unmanned Ground Vehicles (UGVs)", "Advanced Imagery and Monitoring System", "High Altitude Platform Station"], 
-    image: '/images/about1.jpeg',
+    image: '/images/Pic_01.png',
   },
   {
     label: 'Perimeter Security',

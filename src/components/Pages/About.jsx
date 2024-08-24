@@ -51,10 +51,8 @@ export default function About() {
                 ref={ref}
                 initial="hidden"
                 animate={control}
-                className="mx-auto text-center mt-6 mb-8 md:mt-0 md:mb-16"
+                className="mx-auto text-center pt-8 mb-8 md:mt-0 md:mb-16"
               >
-                <Subtitle text={"About Us"} />
-              
                 <Typography
                   variant="lead"
                   className="mx-auto font-text text-justify lg:w-[80%] px-2 my-4 !text-gray-700 lg:text-md text-base"
@@ -104,7 +102,7 @@ export default function About() {
                       </Typography>
                     </div>
                     <div className="flex">
-                      <Image src="/images/about.png" width={800} height={200} alt="About Royal Defense" />
+                      <Image src="/images/about.png" width={600} height={200} alt="About Royal Defense" />
                     </div>
                 </motion.div>
 

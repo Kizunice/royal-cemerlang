@@ -50,7 +50,6 @@ export default function Team() {
                   initial="hidden"
                   animate={control}  
                   className="flex-wrap justify-start text-left w-full">
-                  <Subtitle text={"Team"} />
                   <Typography 
                       variant="h2"
                       color="white"
