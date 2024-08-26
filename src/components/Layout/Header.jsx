@@ -24,7 +24,7 @@ function NavItem({ label, link}) {
   const path = usePathname();
   return (
     <a href={link}>
-      <li className={`${link === path ? "font-bold text-lg" : "font-normal"} font-bold font-primary uppercase pt-2 p-1 text-lg relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center`}>
+      <li className={`${link === path ? "font-bold text-md" : "font-normal"} font-bold font-primary uppercase pt-2 p-1 text-md relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center`}>
         {label}
       </li>
     </a>
@@ -54,10 +54,10 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className="sticky top-4 h-[60px] lg:h-[70px] z-50 my-4 mx-4 lg:mx-12 rounded-md bg-white backdrop-filter backdrop-blur-lg bg-opacity-30" fullWidth >
-      <div className="container mx-auto flex items-center p-2 justify-between text-black">
+    <nav className="sticky top-4 h-[60px] lg:h-[70px] z-50 my-4 mx-4 lg:mx-12 rounded-md bg-[#000b37] backdrop-filter backdrop-blur-lg bg-opacity-75" fullWidth >
+      <div className="container mx-auto flex items-center p-2 justify-between text-white">
         <Link href="/">
-          <Image src="/Logo_RD.png" width={120} height={100} alt="Logo Royal Defense" priority />
+          <Image src="/Logo-RD.png" width={120} height={100} alt="Logo Royal Defense" priority />
         </Link>
         <div className="hidden lg:block">
           <NavList />
@@ -73,9 +73,9 @@ export default function Header() {
           className="ml-auto inline-block text-blue-gray-900 lg:hidden"
         >
           {open ? (
-            <XMarkIcon className="h-6 w-6 text-black" strokeWidth={2} />
+            <XMarkIcon className="h-6 w-6 text-white" strokeWidth={2} />
           ) : (
-            <Bars3Icon className="h-6 w-6 text-black" strokeWidth={2} />
+            <Bars3Icon className="h-6 w-6 text-white" strokeWidth={2} />
           )}
         </IconButton>
       </div>

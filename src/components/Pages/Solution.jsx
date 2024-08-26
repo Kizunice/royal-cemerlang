@@ -71,7 +71,6 @@ export function CardProject({title, icon, items}) {
             </CardFooter>
         </Card>
     )
-
 }
 
 export default function Solution() {
@@ -105,7 +104,7 @@ export default function Solution() {
     return (
         <>
         <section className="w-full h-[100vh]" id="solution" >
-            <div className="bg-[#000b37]/60 absolute h-[101vh] w-[100vw] z-10 p-4 lg:p-0">
+            <div className="bg-[#000b37]/60 absolute h-[101vh] w-[100vw] z-10 p-4 lg:p-0 lg:px-12">
                 <motion.div 
                     variants={variants1}
                     ref={ref}
@@ -128,7 +127,7 @@ export default function Solution() {
                             in accordance with local laws. 
                         </Typography>
 
-                        <Slider {...settings} className="mt-12">
+                        <Slider {...settings} className="mt-16">
                             {ABOUT_BANNER.map((banner,idx)=>(
                                 <div key={idx} className="h-[100vh] w-[80%]">
                                     <h1 className="text-white font-bold text-2xl mb-4">{banner.label}</h1>

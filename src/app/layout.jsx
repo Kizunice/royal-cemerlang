@@ -2,8 +2,7 @@
 import '../styles/globals.css';
 import React, { useState, useEffect } from "react"
 import { Montserrat, Hind } from 'next/font/google';
-import localFont from 'next/font/local'
-import FlareCursor from '@/components/UI/FlareCursor';
+import Head from './head';
 import Header from '@/components/Layout/Header';
 import Footer from '@/components/Layout/Footer';
 import ParticlesComponent from '@/components/UI/Particles';
@@ -37,7 +36,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head/>
+      <Head/>
       <body className={`${hind.variable} font-text`}>
         {isLoading ? (<Loading/>) : (
           <>

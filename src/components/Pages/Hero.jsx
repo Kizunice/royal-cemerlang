@@ -25,7 +25,7 @@ const variants = {
 export default function HeroPage() {
     return (
         <section className="w-full p-6 lg:p-16" id="hero" >
-            <div className="flex flex-col h-[75vh] lg:w-[80%] justify-center items-start">
+            <div className="flex flex-col h-[75vh] lg:w-[80%] lg:px-12 justify-center items-start">
                 <motion.div 
                     className="text-left mt-[-4em] md:mt-[-8em]"
                     variants={variants}
@@ -35,12 +35,12 @@ export default function HeroPage() {
                     <Typography
                     variant="h1"
                     color="white"
-                    className={`${montserrat.variable} font-primary mx-auto font-bold w-full text-[30px] lg:max-w-4xl lg:text-[50px]`}
+                    className={`${montserrat.variable} font-primary !leading-tight mx-auto font-extrabold w-full text-[30px] lg:max-w-4xl lg:text-[72px]`}
                     >
-                        INNOVATING TECHNOLOGIES
+                        INNOVATING <br />  TECHNOLOGIES
                     </Typography>
-                    <h1 className={`${montserrat.variable} font-primary mx-auto font-semibold leading-relaxed text-[#476CFF] text-lg lg:text-[36px] lg:max-w-3xl uppercase mt-2 lg:mt-4`}>
-                        Pushing the boundaries of <br /> what possible.
+                    <h1 className={`${montserrat.variable} font-primary mx-auto font-semibold leading-relaxed text-[#476CFF] text-lg lg:text-[24px] lg:max-w-3xl uppercase mt-2 lg:mt-4`}>
+                        Pushing the boundaries <br /> of what possible.
                     </h1>
                 
                 
