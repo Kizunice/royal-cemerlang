@@ -49,26 +49,29 @@ export default function Team() {
                   ref={ref}
                   initial="hidden"
                   animate={control}  
-                  className="flex-wrap justify-start text-left w-full">
-                  <Typography 
-                      variant="h2"
-                      color="white"
-                      className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-[30px] lg:!text-5xl`}>
-                      We focus on {" "} 
-                      <span className="leading-snug text-[#3F3BF2]">synergy</span>, {" "}
-                      <span className="leading-snug text-[#3F3BF2]">expertise</span>, and {" "}
-                      <span className="leading-snug text-[#3F3BF2]">solidity</span>.
-                  </Typography>
-                </motion.div>
+                  className="flex w-full justify-center items-end">
+                  <div className="flex flex-col my-4 xl:w-1/2  justify-center">
+                      <Image src="/images/Team-1.png" width={800} height={800} className="rounded-xl" alt="Team Royal Defense"/>
+                  </div> 
+              </motion.div>
                 <motion.div 
                   variants={variants2}
                   ref={ref}
                   initial="hidden"
                   animate={control}
-                  className="flex flex-col lg:w-[80%]">
+                  className="flex flex-col lg:ml-[-6rem] lg:mr-[8rem] lg:w-[80%]">
+                    <Typography 
+                      variant="h2"
+                      color="white"
+                      className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-[30px] lg:!text-[2.8em]`}>
+                      We focus on {" "} 
+                      <span className="leading-snug text-[#3F3BF2]">synergy</span>, {" "}
+                      <span className="leading-snug text-[#3F3BF2]">expertise</span>, and {" "}
+                      <span className="leading-snug text-[#3F3BF2]">solidity</span>.
+                  </Typography>
                     <Typography
                       variant="lead"
-                      className="font-text !text-gray-700 lg:text-md text-base mb-4"
+                      className="font-text !text-gray-700 lg:text-md text-base my-4"
                       >
                       Our team is the cornerstone of our success. We are dedicated professionals, 
                       striving for excellence in every solutions. 

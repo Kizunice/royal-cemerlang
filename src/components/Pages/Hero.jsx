@@ -39,7 +39,7 @@ export default function HeroPage() {
                     >
                         INNOVATING <br />  TECHNOLOGIES
                     </Typography>
-                    <h1 className={`${montserrat.variable} font-primary mx-auto font-semibold leading-relaxed text-[#476CFF] text-lg lg:text-[24px] lg:max-w-3xl uppercase mt-2 lg:mt-4`}>
+                    <h1 className={`${montserrat.variable} font-primary mx-auto font-semibold leading-relaxed text-[#476CFF] text-lg lg:text-[28px] lg:max-w-3xl uppercase mt-2`}>
                         Pushing the boundaries <br /> of what possible.
                     </h1>
                 
