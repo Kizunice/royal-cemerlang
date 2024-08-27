@@ -45,7 +45,6 @@ export default function Service() {
     return (
         <section className="w-full p-6 lg:p-16 mx-auto">
             <div className="flex flex-col lg:h-[42rem]">
-               
                 <motion.div 
                     variants={variants1}
                     ref={ref}

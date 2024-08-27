@@ -51,44 +51,41 @@ export default function Team() {
                   animate={control}  
                   className="flex w-full justify-center items-end">
                   <div className="flex flex-col my-4 xl:w-1/2  justify-center">
-                      <Image src="/images/Team-1.png" width={800} height={800} className="rounded-xl" alt="Team Royal Defense"/>
+                      <Image src="/images/Team-1.png" width={700} height={700} className="rounded-xl" alt="Team Royal Defense"/>
                   </div> 
               </motion.div>
-                <motion.div 
-                  variants={variants2}
-                  ref={ref}
-                  initial="hidden"
-                  animate={control}
-                  className="flex flex-col lg:ml-[-6rem] lg:mr-[8rem] lg:w-[80%]">
-                    <Typography 
-                      variant="h2"
-                      color="white"
-                      className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-[30px] lg:!text-[2.8em]`}>
-                      We focus on {" "} 
-                      <span className="leading-snug text-[#3F3BF2]">synergy</span>, {" "}
-                      <span className="leading-snug text-[#3F3BF2]">expertise</span>, and {" "}
-                      <span className="leading-snug text-[#3F3BF2]">solidity</span>.
+              <motion.div 
+                variants={variants2}
+                ref={ref}
+                initial="hidden"
+                animate={control}
+                className="flex flex-col lg:ml-[-6rem] lg:mr-[8rem] lg:w-[80%]">
+                  <Typography 
+                    variant="h2"
+                    color="white"
+                    className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-[30px] lg:!text-[2.8em]`}>
+                    We focus on {" "} 
+                    <span className="leading-snug text-[#3F3BF2]">synergy</span>, {" "}
+                    <span className="leading-snug text-[#3F3BF2]">expertise</span>, and {" "}
+                    <span className="leading-snug text-[#3F3BF2]">solidity</span>.
+                </Typography>
+                  <Typography
+                    variant="lead"
+                    className="font-text !text-gray-700 lg:text-md text-base my-4"
+                    >
+                    Our team is the cornerstone of our success. We are dedicated professionals, 
+                    striving for excellence in every solutions. 
                   </Typography>
-                    <Typography
-                      variant="lead"
-                      className="font-text !text-gray-700 lg:text-md text-base my-4"
-                      >
-                      Our team is the cornerstone of our success. We are dedicated professionals, 
-                      striving for excellence in every solutions. 
-                    </Typography>
-                    <Typography
-                      variant="lead"
-                      className="font-text !text-gray-700 lg:text-md text-base"
-                      >
-                      Our strong management and exceptional leadership guide us in delivering 
-                      customer-focused and techno-based solutions. We leverage frontier technology 
-                      to meet the evolving needs of our end-users, ensuring they benefit from the 
-                      latest advancements. 
-                   </Typography>
-                </motion.div>
-
-
-
+                  <Typography
+                    variant="lead"
+                    className="font-text !text-gray-700 lg:text-md text-base"
+                    >
+                    Our strong management and exceptional leadership guide us in delivering 
+                    customer-focused and techno-based solutions. We leverage frontier technology 
+                    to meet the evolving needs of our end-users, ensuring they benefit from the 
+                    latest advancements. 
+                  </Typography>
+              </motion.div>
 
                 {/* <div className="realtive flex flex-1 flex-col xl:w-1/2 mb-4 ">
                     <Typography 
@@ -106,9 +103,6 @@ export default function Team() {
                 <div className="relative flex flex-col my-4 xl:w-1/2 items-center lg:items-end justify-center">
                     <Image src="/images/team-1.png" width={500} height={500} className="rounded-xl"/>
                 </div> */}
-
-
-                
             </div>           
         </section>
     )

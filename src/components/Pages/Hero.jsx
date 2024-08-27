@@ -42,29 +42,6 @@ export default function HeroPage() {
                     <h1 className={`${montserrat.variable} font-primary mx-auto font-semibold leading-relaxed text-[#476CFF] text-lg lg:text-[28px] lg:max-w-3xl uppercase mt-2`}>
                         Pushing the boundaries <br /> of what possible.
                     </h1>
-                
-                
-                    {/* <div className="mt-8 grid w-full place-items-start md:justify-center">
-                    <div className="mb-2 flex w-full flex-col gap-4 md:flex-row">
-                        <Button
-                        color="white"
-                        variant="outlined"
-                        className="w-full px-4 md:w-[12rem] cursor-none"
-                        >
-                            <Link href="/" scroll={true} className="cursor-none" onClick={(e) => {
-                                setTimeout(() => {
-                                document.getElementById("about") &&
-                                    document
-                                    .getElementById("about")
-                                    .scrollIntoView({ behavior: "smooth"});
-                                }, 500)
-                                }} 
-                            >
-                                get started
-                            </Link>
-                        </Button>
-                    </div>
-                    </div> */}
                 </motion.div>
             </div>           
         </section>
