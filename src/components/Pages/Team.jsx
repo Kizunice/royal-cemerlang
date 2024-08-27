@@ -51,7 +51,7 @@ export default function Team() {
                   animate={control}  
                   className="flex w-full justify-center items-end">
                   <div className="flex flex-col my-4 xl:w-1/2  justify-center">
-                      <Image src="/images/Team-1.png" width={700} height={700} className="rounded-xl" alt="Team Royal Defense"/>
+                      <Image src="/images/team-1.png" width={700} height={700} className="rounded-xl" alt="Team Royal Defense"/>
                   </div> 
               </motion.div>
               <motion.div 
