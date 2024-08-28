@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="max-w-[78rem] mx-auto p-8 lg:pt-12">
                 <div className="flex justify-center text-center text-white">
                             <Link href={"/"} className="flex items-center gap-2 text-white text-xl font-semibold">
-                                <Image src="/Logo-RD.png" width={200}  height={200} alt="Logo Royal Defense"   />
+                                <Image src="/images/logo-RD-white.png" width={200}  height={200} alt="Logo Royal Defense"   />
                             </Link>
                         </div>
                 {/* <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -183,7 +183,7 @@ export default function Footer() {
                             </Link>
                         </div> */}
 
-                        <p className="mt-2 text-sm text-gray-200 sm:order-first sm:mt-0">Copyright &copy; 2024 royaldefense.com</p>
+                        <p className="mt-2 text-sm text-gray-200 sm:order-first sm:mt-0">Copyright &copy; 2024 royaldefense.co.id</p>
                     </div>
                 </div>
             </div>

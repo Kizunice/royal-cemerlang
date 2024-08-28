@@ -57,14 +57,11 @@ export default function Header() {
     <nav className="sticky top-4 h-[60px] lg:h-[70px] z-50 my-4 mx-4 lg:mx-12 rounded-md bg-[#000b37] backdrop-filter backdrop-blur-lg bg-opacity-85" fullWidth >
       <div className="container mx-auto flex items-center p-2 justify-between text-white">
         <Link href="/">
-          <Image src="/Logo-RD.png" width={100} height={100} alt="Logo Royal Defense" priority />
+          <Image src="/images/logo-RD-white.png" width={100} height={100} alt="Logo Royal Defense" priority />
         </Link>
         <div className="hidden lg:block">
           <NavList />
         </div>
-        {/* <Button color="gray" className="hidden lg:inline-block">
-          <Link href="/#contact" >Contact Us</Link>
-        </Button> */}
         <IconButton
           size="sm"
           variant="text"
@@ -82,9 +79,6 @@ export default function Header() {
       <Collapse open={open}>
         <div className="rounded-xl bg-white backdrop-filter p-2">
           <NavList />
-          {/* <Button className="mb-2" fullWidth>
-            Get a quote
-          </Button> */}
         </div>
       </Collapse>
     </nav>
