@@ -43,67 +43,47 @@ export default function Team() {
       }, [control, inView]);
     return (
         <section className="bg-white p-8 py-[6rem] lg:px-20 lg:py-[10rem] mx-auto" id="team" >
-            <div className="flex flex-col lg:flex-row lg:w-[90%] mx-auto rounded-lg shadow-xl px-8 py-12 justify-center items-center">
-              <motion.div 
-                  variants={variants1}
-                  ref={ref}
-                  initial="hidden"
-                  animate={control}  
-                  className="flex w-full justify-center items-end">
-                  <div className="flex flex-col my-4 xl:w-1/2  justify-center">
-                      <Image src="/images/team-1.png" width={700} height={700} className="rounded-xl" alt="Team Royal Defense"/>
-                  </div> 
-              </motion.div>
+            <div className="md:w-[80%] mx-auto">
               <motion.div 
                 variants={variants2}
                 ref={ref}
                 initial="hidden"
-                animate={control}
-                className="flex flex-col lg:ml-[-6rem] lg:mr-[8rem] lg:w-[80%]">
-                  <Typography 
-                    variant="h2"
-                    color="white"
-                    className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-[26px] lg:!text-[2.8em]`}>
-                    We focus on {" "} 
-                    <span className="leading-snug text-[#3F3BF2]">synergy</span>, {" "}
-                    <span className="leading-snug text-[#3F3BF2]">expertise</span>, and {" "}
-                    <span className="leading-snug text-[#3F3BF2]">solidity</span>.
-                </Typography>
-                  <Typography
-                    variant="lead"
-                    className="font-text !text-gray-700 lg:text-md text-base my-4"
-                    >
-                    Our team is the cornerstone of our success. We are dedicated professionals, 
-                    striving for excellence in every solutions. 
-                  </Typography>
-                  <Typography
-                    variant="lead"
-                    className="font-text !text-gray-700 lg:text-md text-base"
-                    >
-                    Our strong management and exceptional leadership guide us in delivering 
-                    customer-focused and techno-based solutions. We leverage frontier technology 
-                    to meet the evolving needs of our end-users, ensuring they benefit from the 
-                    latest advancements. 
-                  </Typography>
-              </motion.div>
-
-                {/* <div className="realtive flex flex-1 flex-col xl:w-1/2 mb-4 ">
-                    <Typography 
-                        variant="h1"
-                        className="text-primary !font-extrabold mb-10 text-[28px] lg:text-[40px]"
-                    > Tentang Kami
-                    </Typography>
-                    <Typography
+                animate={control}  
+                className="flex flex-col lg:flex-row w-full p-2 justify-center items-center text-left rounded-lg shadow-xl py-6 px-6 lg:px-12">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 px-4 py-6">
+                    <div className="flex justify-center items-center">
+                      <Image src="/images/team-1.png" width={300} height={300} className="rounded-xl" alt="Team Royal Defense"/>
+                    </div>
+                    <div className="flex flex-col mx-auto justify-center items-center">
+                      <Typography 
+                        variant="h2"
+                        color="white"
+                        className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-[24px] lg:!text-3xl`}>
+                        We focus on {" "} 
+                        <span className="leading-snug text-[#3F3BF2]">synergy</span>, {" "}
+                        <span className="leading-snug text-[#3F3BF2]">expertise</span>, and {" "}
+                        <span className="leading-snug text-[#3F3BF2]">solidity</span>.
+                      </Typography>
+                      <Typography
                         variant="lead"
-                        className="!text-gray-500 text-[18px]"
-                    >
-                    <span className="font-extrabold text-black">Zerya Fishing</span> merupakan distributor toko pancing yang menyediakan berbagai macam kebutuhan alat pancing mulai dari reel, line, joran aksesoris hingga kebutuhan pendukung untuk memancing.    <br /> <br />  Kami melayani pembelian produk secara grosir maupun eceran. <br /><br />             Produk yang kami sediakan sangat beragam dari berbagai brand yang dapat para pemancing temukan sesuai kebutuhan.
-                    </Typography> 
-                </div>
-                <div className="relative flex flex-col my-4 xl:w-1/2 items-center lg:items-end justify-center">
-                    <Image src="/images/team-1.png" width={500} height={500} className="rounded-xl"/>
-                </div> */}
-            </div>           
+                        className="font-text !text-gray-700 lg:text-md text-base my-4"
+                        >
+                        Our team is the cornerstone of our success. We are dedicated professionals, 
+                        striving for excellence in every solutions. 
+                      </Typography>
+                      <Typography
+                        variant="lead"
+                        className="font-text !text-gray-700 lg:text-md text-base"
+                        >
+                        Our strong management and exceptional leadership guide us in delivering 
+                        customer-focused and techno-based solutions. We leverage frontier technology 
+                        to meet the evolving needs of our end-users, ensuring they benefit from the 
+                        latest advancements. 
+                      </Typography>
+                    </div>
+                  </div>
+              </motion.div>
+            </div>
         </section>
     )
 }
