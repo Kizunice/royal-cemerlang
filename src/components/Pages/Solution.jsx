@@ -44,35 +44,28 @@ const variants1 = {
     },
   };
 
- 
-
-export function CardProject({title, icon, items}) {
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
     return (
-        <Card className="w-full mx-auto max-w-[20rem] h-[28rem] px-4 py-6 bg-[#F4F3FB]">
-            <CardHeader floated={false} shadow={false} className="rounded-none bg-[#F4F3FB] ">
-                <Image src={icon} width={70} height={70} alt={title} />
-            </CardHeader>
-            <CardBody className="px-4">
-                <Typography className="text-[#3F3BF2] mt-1 mb-2 text-[24px] font-bold">
-                {title}
-                </Typography>
-            </CardBody>
-            <CardFooter className="absolute -bottom-0 !p-0 mb-6">
-                <List className="p-0">
-                {items.map(({project}, index) => (
-                    <ListItem key={index} className="group rounded-none py-0.5 text-xs font-small text-blue-gray-700">
-                        <ListItemPrefix className="!mr-2">
-                            <ChevronDownIcon width={14} height={14}/>
-                        </ListItemPrefix>
-                        {project}
-                    </ListItem>
-                ))}
-                </List>
-            </CardFooter>
-        </Card>
-    )
-}
-
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
 export default function Solution() {
     const control = useAnimation();
     const [ref, inView] = useInView();
@@ -87,24 +80,36 @@ export default function Solution() {
       }, [control, inView]);
 
     const settings = {
-        dots: false,
+        dots: true,
         arrows: false,
         infinite: true,
-        swipe: false,
-        draggable: false,
-        pauseOnHover : false,
-        touchMove: false,
-        speed: 800,
+        swipe: true,
+        draggable: true,
+        pauseOnHover : true,
+        // fade: true,
+        // waitForAnimate: false,
+        speed: 500,
         autoplay: true,
         autoplaySpeed: 8000,
         slidesToShow: 1,
         slidesToScroll: 1,
+        appendDots: dots => (
+            <div>
+              <ul className="mt-[-5rem] text-center !z-40"> {dots} </ul>
+            </div>
+          ),
+        customPaging: i => (
+        <div className="text-primary text-center bg-white rounded-3xl my-2 ">
+            {/* {i + 1} */}
+            {i+1}
+        </div>
+        )
     };
     
     return (
         <>
         <section className="w-full h-[100vh]" id="solution" >
-            <div className="bg-[#000b37]/60 absolute h-[101vh] w-[100vw] z-10 p-4 lg:p-0 lg:px-12">
+            {/* <div className="bg-[#000b37]/60 absolute h-[101vh] w-[100vw] z-10 p-4 lg:p-0 lg:px-12">
                 <motion.div 
                     variants={variants1}
                     ref={ref}
@@ -127,44 +132,79 @@ export default function Solution() {
                             in accordance with local laws. 
                         </Typography>
 
-                        <Slider {...settings} className="mt-16">
+                        <Slider {...settings} className="mt-8">
                             {ABOUT_BANNER.map((banner,idx)=>(
                                 <div key={idx} className="h-[100vh] w-[80%]">
                                     <h1 className="text-white font-bold text-2xl mb-4">{banner.label}</h1>
                                     <div className="flex flex-col lg:flex-row">
                                         <div className="lg:w-[60%] mb-2">
-                                            <p className="text-gray-200 text-md transition-all ">
-                                                {
-                                                   index ? banner.value : banner.list.map((list => (
-                                                    <li key={list}>{list}</li>
-                                                )))
-                                                }
+                                            <p className="text-gray-200 mb-4 text-md transition-all ">
+                                                {banner.value}
                                             </p>
-                                            <button 
-                                                className="mt-6 px-4 py-2 text-white border border-white" 
-                                                onClick={() => {setIndex(!index)}} 
-                                            >
-                                                read more
-                                            </button>
+                                            <ul className="px-6">
+                                                {
+                                                  banner.list.map((list => (
+                                                    <li className="list-disc text-gray-200" key={list}>{list}</li>
+                                                    )))  
+                                                }
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             ))}
                         </Slider>
                 </motion.div>
+            </div> */}
+            <div className="mb-8 absolute !z-30 pt-[6rem] px-8 lg:px-[6rem]">
+                <Typography
+                    variant="h1"
+                    className={`${montserrat.variable} font-primary text-white my-6 leading-snug text-[30px] lg:max-w-3xl lg:text-5xl`}
+                >
+                AREAS OF FOCUS
+                </Typography>
+                <Typography 
+                    variant="h2"
+                    className={`${montserrat.variable} font-primary text-white my-4 leading-snug text-xl w-[85%] lg:w-[55%] lg:text-2xl`}>
+                    RCT solutions are {" "} 
+                    <span className="leading-snug text-[#3F3BF2]">innovative</span>, {" "}
+                    <span className="leading-snug text-[#3F3BF2]">reliable</span>, and {" "} 
+                    <span className="leading-snug text-[#3F3BF2]">user-focused</span> {" "} 
+                    in accordance with local laws. 
+                </Typography>
             </div>
 
-            <Slider {...settings} className="relative z-0" >
+            <Slider {...settings}>
                 {ABOUT_BANNER.map((banner,idx)=>(
-                     <div key={idx} className="h-[100vh]">
-                        <img src={banner.image} alt={banner.label} className="w-[100%] object-cover"/>
-                        
+                    <>
+                    <div key={idx} className="absolute bg-[#000b37]/25 !z-30 h-[100vh] w-full pt-[20rem] lg:pt-[18rem] lg:px-[6rem]">
+                        {/* <h1 className="w-[35%] lg:w-[60%] text-white font-bold text-2xl mb-4">{idx+1 +". "+ banner.label}</h1> */}
+                        <div className="flex flex-wrap px-8 lg:px-0 w-[25rem] lg:w-[50rem]">
+                            <h1 className="text-white font-bold text-2xl mb-4">{banner.label}</h1>
+                        </div>
+                        <div className="flex flex-col max-w-[72rem] lg:flex-row">
+                            <div className="w-[35%] lg:w-[60%] px-8 lg:px-0 mb-2">
+                                <p className="text-gray-200 mb-4 text-md">
+                                    {banner.value}
+                                </p>
+                                <ul className="px-6">
+                                    {
+                                        banner.list.map((list => (
+                                        <li className="list-disc text-gray-200" key={list}>{list}</li>
+                                        )))  
+                                    }
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    <div key={idx} className="relative !z-0 h-[100vh]">
+                        <img src={banner.image} alt={banner.label} className="w-[100%] h-[100%] object-cover"/>
+                    </div>
+                    </>
                 ))}
             </Slider>
         </section>
-      
-        {/* <section className="w-full p-6 lg:min-h-[50rem] lg:p-16" id="solution" >
+{/*       
+        <section className="w-full p-6 lg:min-h-[50rem] lg:p-16" id="solution" >
             <div className="flex flex-col my-4 mx-auto">
                 <motion.div 
                     variants={variants1}

@@ -25,9 +25,9 @@ const variants = {
 export default function HeroPage() {
     return (
         <section className="w-full p-6 lg:p-16" id="hero" >
-            <div className="flex flex-col h-[75vh] lg:w-[80%] lg:px-12 justify-center items-start">
+            <div className="flex flex-col h-[75vh] mx-auto lg:w-[80%] lg:px-12 justify-center items-center">
                 <motion.div 
-                    className="text-left mt-[-4em] md:mt-[-8em]"
+                    className="text-center mt-[-4em] md:mt-[-8em]"
                     variants={variants}
                     initial="hidden"
                     animate="show"
@@ -35,7 +35,7 @@ export default function HeroPage() {
                     <Typography
                     variant="h1"
                     color="white"
-                    className={`${montserrat.variable} font-primary !leading-tight mx-auto font-extrabold w-full text-[30px] lg:max-w-4xl lg:text-[72px]`}
+                    className={`${montserrat.variable} font-primary !leading-tight mx-auto font-extrabold w-full text-[30px] lg:max-w-4xl lg:text-[68px]`}
                     >
                         INNOVATING <br />  TECHNOLOGIES
                     </Typography>

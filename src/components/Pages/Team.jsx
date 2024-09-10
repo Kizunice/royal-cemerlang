@@ -43,7 +43,7 @@ export default function Team() {
       }, [control, inView]);
     return (
         <section className="bg-white p-8 py-[6rem] lg:px-20 lg:py-[10rem] mx-auto" id="team" >
-            <div className="flex flex-col lg:flex-row lg:w-[90%] mx-auto justify-center items-center">
+            <div className="flex flex-col lg:flex-row lg:w-[90%] mx-auto rounded-lg shadow-xl px-8 py-12 justify-center items-center">
               <motion.div 
                   variants={variants1}
                   ref={ref}
@@ -63,7 +63,7 @@ export default function Team() {
                   <Typography 
                     variant="h2"
                     color="white"
-                    className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-[30px] lg:!text-[2.8em]`}>
+                    className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-[26px] lg:!text-[2.8em]`}>
                     We focus on {" "} 
                     <span className="leading-snug text-[#3F3BF2]">synergy</span>, {" "}
                     <span className="leading-snug text-[#3F3BF2]">expertise</span>, and {" "}

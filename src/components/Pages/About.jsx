@@ -45,14 +45,21 @@ export default function About() {
 
     return (
         <section className="bg-white p-6 lg:min-h-[50rem] lg:p-16" id="about" >
-            <div className="flex flex-col mb-6 justify-center items-center lg:w-[80%] mx-auto">
+            <div className="flex flex-col mb-10 justify-center items-center lg:w-[80%] mx-auto">
               <motion.div 
                 variants={variants1}
                 ref={ref}
                 initial="hidden"
                 animate={control}
-                className="mx-auto text-center pt-8 mb-8 md:mt-0 md:mb-16"
+                className="mx-auto text-center pt-8 mb-8 md:mt-0"
               >
+                <Typography 
+                  variant="h2"
+                  color="white"
+                  className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-4xl lg:!text-6xl`}>
+                  About {" "}
+                  <span className="text-[#3F3BF2]">Us</span>
+                </Typography>
                 <Typography
                   variant="lead"
                   className="mx-auto font-text text-justify lg:w-[80%] px-2 my-4 !text-gray-700 lg:text-md text-base"
@@ -84,12 +91,12 @@ export default function About() {
                   ref={ref}
                   initial="hidden"
                   animate={control}  
-                  className="flex flex-col lg:flex-row lg:w-[80%] p-2 justify-center items-center text-left">
+                  className="flex flex-col lg:flex-row lg:w-[80%] p-2 justify-center items-center text-left rounded-lg shadow-xl py-6 px-8">
                     <div className="flex-col mx-auto  lg:mr-[8rem] mb-4">
                       <Typography 
                         variant="h2"
                         color="white"
-                        className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-4xl lg:!text-6xl`}>
+                        className={`${montserrat.variable} font-primary text-[#000b37] my-4 leading-snug !text-4xl`}>
                         Commitment to {" "}
                         <span className="text-[#3F3BF2]">Service</span>
                       </Typography>
@@ -102,7 +109,7 @@ export default function About() {
                       </Typography>
                     </div>
                     <div className="flex">
-                      <Image src="/images/about.png" width={600} height={200} alt="About Royal Defense" />
+                      <Image src="/images/about.png" width={400} height={200} alt="About Royal Defense" />
                     </div>
                 </motion.div>
 

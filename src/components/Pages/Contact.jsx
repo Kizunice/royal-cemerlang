@@ -55,7 +55,7 @@ export default function Contact() {
                       variant="h2"
                       color="white"
                       className={`${montserrat.variable} font-primary text-white my-4 leading-snug !text-2xl lg:!text-5xl`}>
-                      Send us your queries
+                      Contact Us
                   </Typography>
                 </motion.div>
                 <motion.div 
@@ -63,14 +63,14 @@ export default function Contact() {
                   ref={ref}
                   initial="hidden"
                   animate={control}
-                  className="flex flex-col border border-white lg:w-[50%] text-left rounded-lg p-8 text-white">
+                  className="flex flex-col bg-[#292D33] backdrop-filter backdrop-blur-lg bg-opacity-85 lg:w-[50%] text-left rounded-xl p-8 text-white">
                     <form>
                         <div className="mb-4">
                             <label className="mb-2 text-left ">Name</label>
                             <input
                                 type="text"
                                 placeholder="Type your name" 
-                                className="w-full rounded-sm bg-gray border-2 border-grey p-2" 
+                                className="w-full rounded-lg bg-gray border-2 border-grey p-2" 
                             />
                         </div>
                         <div className="mb-4">
@@ -78,7 +78,7 @@ export default function Contact() {
                             <input
                                 type="email"
                                 placeholder="Type your email address" 
-                                className="w-full rounded-sm bg-gray border-2 border-grey p-2" 
+                                className="w-full rounded-lg bg-gray border-2 border-grey p-2" 
                             />
                         </div>
                         <div className="mb-4">
@@ -86,7 +86,7 @@ export default function Contact() {
                             <input
                                 type="number"
                                 placeholder="Type your phone number" 
-                                className="w-full rounded-sm bg-gray border-2 border-grey p-2" 
+                                className="w-full rounded-lg bg-gray border-2 border-grey p-2" 
                             />
                         </div>
 
@@ -94,7 +94,7 @@ export default function Contact() {
                             <label className="mb-2 text-left">Message</label>
                             <textarea
                                 placeholder="Type your message" 
-                                className="w-full rounded-sm bg-gray border-2 border-grey p-2" 
+                                className="w-full rounded-lg bg-gray border-2 border-grey p-2" 
                             />
                         </div>
 
